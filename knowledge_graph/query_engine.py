@@ -41,11 +41,12 @@ class QueryEngine:
                 sanitized[key] = str(value)
         return sanitized
 
-    def add_entity(self, name, properties):
-        sanitized_properties = self._sanitize_properties(properties)
+    def add_entity(self, name, properties=None):
+        sanitized_properties = self._sanitize_properties(properties or {})
         query = """
         MERGE (e:Entity {name: $name})
-        SET e += $properties
+        ON CREATE SET e += $properties
+        ON MATCH SET e += $properties
         RETURN e
         """
         self.execute_query(query, {"name": name, "properties": sanitized_properties})
@@ -65,6 +66,72 @@ class QueryEngine:
         query = """
         MATCH (e:Entity {name: $name})-[r]-(related)
         RETURN type(r) AS relationship_type, related.name AS related_entity
+        """
+        return self.execute_query(query, {"name": entity_name})
+
+    def get_entity_by_name(self, name):
+        query = """
+        MATCH (e:Entity {name: $name})
+        RETURN e
+        """
+        result = self.execute_query(query, {"name": name})
+        return result[0]['e'] if result else None
+
+    def update_entity_property(self, name, property_name, property_value):
+        sanitized_value = self._sanitize_properties({property_name: property_value})[property_name]
+        query = """
+        MATCH (e:Entity {name: $name})
+        SET e[$property_name] = $property_value
+        RETURN e
+        """
+        self.execute_query(query, {"name": name, "property_name": property_name, "property_value": sanitized_value})
+
+    def delete_entity(self, name):
+        query = """
+        MATCH (e:Entity {name: $name})
+        DETACH DELETE e
+        """
+        self.execute_query(query, {"name": name})
+
+    def get_all_entities(self):
+        query = """
+        MATCH (e:Entity)
+        RETURN e
+        """
+        return self.execute_query(query)
+
+    def get_entities_by_property(self, property_name, property_value):
+        query = """
+        MATCH (e:Entity)
+        WHERE e[$property_name] = $property_value
+        RETURN e
+        """
+        return self.execute_query(query, {"property_name": property_name, "property_value": property_value})
+
+    def add_concept(self, name, properties=None):
+        sanitized_properties = self._sanitize_properties(properties or {})
+        query = """
+        MERGE (c:Concept {name: $name})
+        SET c += $properties
+        RETURN c
+        """
+        self.execute_query(query, {"name": name, "properties": sanitized_properties})
+
+    def relate_entity_to_concept(self, entity_name, concept_name, relationship_type="RELATED_TO", properties=None):
+        sanitized_properties = self._sanitize_properties(properties or {})
+        query = f"""
+        MATCH (e:Entity {{name: $entity_name}})
+        MATCH (c:Concept {{name: $concept_name}})
+        MERGE (e)-[r:{relationship_type}]->(c)
+        SET r += $properties
+        RETURN r
+        """
+        self.execute_query(query, {"entity_name": entity_name, "concept_name": concept_name, "properties": sanitized_properties})
+
+    def get_related_concepts(self, entity_name):
+        query = """
+        MATCH (e:Entity {name: $name})-[r:RELATED_TO]->(c:Concept)
+        RETURN c.name AS concept, type(r) AS relationship_type, r AS relationship_properties
         """
         return self.execute_query(query, {"name": entity_name})
 

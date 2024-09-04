@@ -73,6 +73,15 @@ class AutonomousLoop:
                 self.knowledge_graph.add_entity(entity['name'], entity.get('properties', {}))
 
             for rel in relationships:
+                # Ensure both start and end entities exist before adding the relationship
+                start_entity = self.knowledge_graph.get_entity_by_name(rel['start'])
+                end_entity = self.knowledge_graph.get_entity_by_name(rel['end'])
+                
+                if not start_entity:
+                    self.knowledge_graph.add_entity(rel['start'], {"type": "placeholder"})
+                if not end_entity:
+                    self.knowledge_graph.add_entity(rel['end'], {"type": "placeholder"})
+                
                 self.knowledge_graph.add_relationship(
                     rel['start'], rel['end'], rel['type'], rel.get('properties', {})
                 )
@@ -128,7 +137,7 @@ class AutonomousLoop:
             
             if not reasoning_result:
                 self.logger.warning("Empty reasoning result. Using default action.")
-                return {"type": "default_action"}
+                return await self._create_default_action(scenario)
             
             self.logger.debug("Generating workflow")
             workflow = await self.workflow_engine.generate_workflow(json.dumps(reasoning_result))
@@ -136,7 +145,7 @@ class AutonomousLoop:
             
             if not workflow:
                 self.logger.warning("Failed to generate workflow. Using default action.")
-                return {"type": "default_action"}
+                return await self._create_default_action(scenario)
             
             self.logger.debug(f"Executing workflow: {workflow.name}")
             workflow_result = await self.workflow_engine.execute_workflow(workflow.name)
@@ -147,13 +156,25 @@ class AutonomousLoop:
             
             if not action or 'type' not in action:
                 self.logger.warning("Invalid action selected. Using default action.")
-                action = {"type": "default_action"}
+                return await self._create_default_action(scenario)
             
             self.logger.info(f"Selected action: {action}")
             return action
         except Exception as e:
             self.error_handler.handle_error(e, f"Error processing scenario: {str(e)}")
-            return {"type": "default_action"}
+            return await self._create_default_action(scenario)
+
+    async def _create_default_action(self, scenario):
+        # Create a default action that includes information from the scenario
+        default_action = {
+            "type": "default_action",
+            "description": "No specific action could be determined",
+            "scenario_type": scenario.get('type', 'unknown'),
+            "scenario_complexity": scenario.get('complexity', 'unknown')
+        }
+        # Ensure the default action is added to the knowledge graph
+        await self.update_knowledge_graph(scenario, default_action, {"success": False, "message": "Default action used"})
+        return default_action
 
     async def _select_action(self, scenario, reasoning_result, workflow_result):
         try:

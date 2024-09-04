@@ -61,7 +61,7 @@ class AbstractReasoningEngine:
             
             entities = await self._extract_entities(context)
             for entity in entities:
-                self.query_engine.add_entity(entity)
+                self.query_engine.add_entity(entity, {"type": "extracted_entity"})  # Add default properties
             
             actor_goals = self._extract_actor_goals(actors)
             
@@ -69,7 +69,7 @@ class AbstractReasoningEngine:
             patterns = await self._identify_patterns(related_concepts)
             
             for i in range(len(entities) - 1):
-                self.query_engine.add_relationship(entities[i], entities[i+1], "RELATED_TO")
+                self.query_engine.add_relationship(entities[i], entities[i+1], "RELATED_TO", {})
             
             conclusions = await self._generate_conclusions(patterns, actor_goals, constraints)
             action_suggestions = await self._generate_action_suggestions(conclusions, scenario)

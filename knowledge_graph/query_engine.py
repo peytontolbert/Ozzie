@@ -1,59 +1,71 @@
+from neo4j import GraphDatabase
 from utils.logger import Logger
 from utils.error_handler import ErrorHandler
+import json
 
 class QueryEngine:
-    def __init__(self, knowledge_graph):
-        self.knowledge_graph = knowledge_graph
+    def __init__(self, uri, user, password):
+        self.driver = GraphDatabase.driver(uri, auth=(user, password))
         self.logger = Logger("QueryEngine")
         self.error_handler = ErrorHandler()
 
+    def close(self):
+        self.driver.close()
+
+    def execute_query(self, query, parameters=None):
+        with self.driver.session() as session:
+            result = session.run(query, parameters or {})
+            return [record.data() for record in result]
+
     async def find_related_concepts(self, entities):
+        query = """
+        MATCH (e:Entity)-[:RELATED_TO]-(c:Concept)
+        WHERE e.name IN $entities
+        RETURN DISTINCT c.name AS concept
+        """
         try:
-            # Implement the logic to find related concepts
-            # This is a placeholder implementation
-            related_concepts = []
-            for entity in entities:
-                # Simulate finding related concepts
-                related_concepts.extend([f"{entity}_related_1", f"{entity}_related_2"])
-            return related_concepts
+            result = self.execute_query(query, {"entities": entities})
+            return [record["concept"] for record in result]
         except Exception as e:
             self.error_handler.handle_error(e, "Error finding related concepts")
             return []
 
-    def execute_query(self, query, parameters=None):
-        with self.graph_structure.driver.session() as session:
-            result = session.run(query, parameters or {})
-            return [record.data() for record in result]
+    def _sanitize_properties(self, properties):
+        sanitized = {}
+        for key, value in properties.items():
+            if isinstance(value, (str, int, float, bool)):
+                sanitized[key] = value
+            elif isinstance(value, (list, dict)):
+                sanitized[key] = json.dumps(value)
+            else:
+                sanitized[key] = str(value)
+        return sanitized
 
-    def get_node_by_id(self, node_id):
-        query = (
-            "MATCH (n) "
-            "WHERE id(n) = $node_id "
-            "RETURN n"
-        )
-        result = self.execute_query(query, {"node_id": node_id})
-        return result[0]['n'] if result else None
+    def add_entity(self, name, properties):
+        sanitized_properties = self._sanitize_properties(properties)
+        query = """
+        MERGE (e:Entity {name: $name})
+        SET e += $properties
+        RETURN e
+        """
+        self.execute_query(query, {"name": name, "properties": sanitized_properties})
 
-    def get_nodes_by_label(self, label):
-        query = (
-            f"MATCH (n:{label}) "
-            "RETURN n"
-        )
-        return self.execute_query(query)
+    def add_relationship(self, start, end, relationship_type, properties):
+        sanitized_properties = self._sanitize_properties(properties)
+        query = f"""
+        MATCH (start:Entity {{name: $start}})
+        MATCH (end:Entity {{name: $end}})
+        MERGE (start)-[r:{relationship_type}]->(end)
+        SET r += $properties
+        RETURN r
+        """
+        self.execute_query(query, {"start": start, "end": end, "properties": sanitized_properties})
 
-    def get_relationships(self, start_node_id, end_node_id=None, relationship_type=None):
-        query = (
-            "MATCH (a)-[r]->(b) "
-            "WHERE id(a) = $start_id "
-        )
-        if end_node_id:
-            query += "AND id(b) = $end_id "
-        if relationship_type:
-            query += f"AND type(r) = '{relationship_type}' "
-        query += "RETURN r"
-        
-        parameters = {"start_id": start_node_id}
-        if end_node_id:
-            parameters["end_id"] = end_node_id
-        
-        return self.execute_query(query, parameters)
+    def get_entity_relationships(self, entity_name):
+        query = """
+        MATCH (e:Entity {name: $name})-[r]-(related)
+        RETURN type(r) AS relationship_type, related.name AS related_entity
+        """
+        return self.execute_query(query, {"name": entity_name})
+
+    # Add more graph-specific query methods as needed

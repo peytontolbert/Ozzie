@@ -22,6 +22,13 @@ from simulated_environment import SimulatedEnvironment
 from generalized_simulated_environment import GeneralizedSimulatedEnvironment
 import logging
 from utils.logger import Logger
+from knowledge_graph.graph_structure import GraphStructure
+from knowledge_graph.query_engine import QueryEngine
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
 
 app = FastAPI()
 
@@ -41,65 +48,70 @@ async def startup_event():
     logger.warning("This is a warning message")
     logger.error("This is an error message")
     
+    # Initialize app.state.agi_components
+    app.state.agi_components = {}
+
+    # Initialize GraphStructure and QueryEngine using environment variables
+    uri = os.getenv("NEO4J_URI")
+    user = os.getenv("NEO4J_USER")
+    password = os.getenv("NEO4J_PASSWORD")
+    
+    graph_structure = GraphStructure(uri, user, password)
+    query_engine = QueryEngine(uri, user, password)
+
+    # Add GraphStructure and QueryEngine to agi_components
+    app.state.agi_components["graph_structure"] = graph_structure
+    app.state.agi_components["query_engine"] = query_engine
+    app.state.agi_components["knowledge_graph"] = query_engine  # Use QueryEngine as the knowledge graph
+
     global feedback_integrator
     feedback_integrator = FeedbackIntegrator(state_size=10, action_size=5)  # Provide values if needed
     await data_aggregator.connect()
     await event_publisher.start()
+
     # Initialize AGI components
-    value_alignment_verifier = ValueAlignmentVerifier()
-    containment_protocol_manager = ContainmentProtocolManager()
-    alignment_decision_simulator = AlignmentDecisionSimulator()
-    long_term_impact_analyzer = LongTermImpactAnalyzer()
-    explanation_generator = ExplanationGenerator()
-    intent_interpreter = IntentInterpreter()
-    workflow_engine = WorkflowEngine()
-    workflow_optimizer = WorkflowOptimizer(workflow_engine)
-    augmented_intelligence_interface = AugmentedIntelligenceInterface(
-        intent_interpreter=intent_interpreter,
-        explanation_generator=explanation_generator,
-        feedback_integrator=feedback_integrator
-    )
-
-    experience_engine = ExperienceEngine()
-    experience_engine.simulated_environment = GeneralizedSimulatedEnvironment()
-    if hasattr(experience_engine, 'initialize'):
-        experience_engine.initialize()
-
-    # Add these components to a global state or dependency injection system
-    app.state.agi_components = {
-        "value_alignment_verifier": value_alignment_verifier,
-        "containment_protocol_manager": containment_protocol_manager,
-        "alignment_decision_simulator": alignment_decision_simulator,
-        "long_term_impact_analyzer": long_term_impact_analyzer,
+    app.state.agi_components.update({
+        "value_alignment_verifier": ValueAlignmentVerifier(),
+        "containment_protocol_manager": ContainmentProtocolManager(),
+        "alignment_decision_simulator": AlignmentDecisionSimulator(),
+        "long_term_impact_analyzer": LongTermImpactAnalyzer(),
+        "explanation_generator": ExplanationGenerator(),
+        "intent_interpreter": IntentInterpreter(),
+        "workflow_engine": WorkflowEngine(),
         "feedback_integrator": feedback_integrator,
-        "explanation_generator": explanation_generator,
-        "augmented_intelligence_interface": augmented_intelligence_interface,
-        "intent_interpreter": intent_interpreter,
-        "workflow_optimizer": workflow_optimizer,
-        "experience_engine": experience_engine
-    }
+    })
+
+    # Initialize components that depend on other components
+    app.state.agi_components.update({
+        "workflow_optimizer": WorkflowOptimizer(app.state.agi_components["workflow_engine"]),
+        "augmented_intelligence_interface": AugmentedIntelligenceInterface(
+            intent_interpreter=app.state.agi_components["intent_interpreter"],
+            explanation_generator=app.state.agi_components["explanation_generator"],
+            feedback_integrator=app.state.agi_components["feedback_integrator"]
+        ),
+    })
+
+    # Initialize ExperienceEngine with the query_engine
+    experience_engine = ExperienceEngine(query_engine=app.state.agi_components["query_engine"])
+    app.state.agi_components["experience_engine"] = experience_engine
+
+    # Create hierarchical agent structure
+    await experience_engine.create_hierarchical_agents(2, 3)
 
     # Initialize VirtualEnvironment with experience_engine
     ve = VirtualEnvironment(experience_engine)
     ve.initialize()
 
-    # Initialize AbstractReasoningEngine
-    knowledge_graph = app.state.agi_components.get("knowledge_graph")
-    if not knowledge_graph:
-        logger.warning("Knowledge graph not found. Initializing empty knowledge graph.")
-        knowledge_graph = {}  # Or initialize with an appropriate empty structure
-
-    abstract_reasoning_engine = AbstractReasoningEngine(knowledge_graph)
-
-    # Add AbstractReasoningEngine to agi_components
+    # Initialize AbstractReasoningEngine with the knowledge_graph (query_engine)
+    abstract_reasoning_engine = AbstractReasoningEngine(app.state.agi_components["knowledge_graph"])
     app.state.agi_components["abstract_reasoning_engine"] = abstract_reasoning_engine
-
-    # Add WorkflowEngine to agi_components
-    app.state.agi_components["workflow_engine"] = workflow_engine
 
     # Start the autonomous loop
     autonomous_loop = AutonomousLoop(app.state.agi_components, ve)
     asyncio.create_task(autonomous_loop.run())
+
+    # Start Ozzie's agent management
+    asyncio.create_task(app.state.agi_components["experience_engine"].ozzie_manage_agents())
 
 @app.on_event("shutdown")
 async def shutdown_event():

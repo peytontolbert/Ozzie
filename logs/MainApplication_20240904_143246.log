@@ -2,3 +2,4 @@
 2024-09-04 14:32:46,318 - MainApplication - DEBUG - This is a debug message
 2024-09-04 14:32:46,318 - MainApplication - WARNING - This is a warning message
 2024-09-04 14:32:46,318 - MainApplication - ERROR - This is an error message
+2024-09-04 14:32:47,486 - MainApplication - WARNING - Knowledge graph not found. Initializing empty knowledge graph.

@@ -10,9 +10,11 @@ from advanced_learning_module import AdvancedLearningModule
 import random
 from typing import Dict, List
 from generalized_simulated_environment import GeneralizedSimulatedEnvironment, Agent, Obstacle, Resource
+from autonomous_application import AutonomousApplication
+import asyncio
 
 class ExperienceEngine:
-    def __init__(self):
+    def __init__(self, query_engine):
         self.scenario_types = [
             "technological", "environmental", "social", "economic", "political"
         ]
@@ -26,6 +28,8 @@ class ExperienceEngine:
         self.multi_modal_processor = MultiModalProcessor()
         self.chat_gpt = ChatGPT()  # Ensure this is properly initialized
         self.simulated_environment = GeneralizedSimulatedEnvironment()
+        self.autonomous_applications = {}
+        self.query_engine = query_engine
 
     def initialize(self):
         # Any initialization logic for the ExperienceEngine
@@ -61,6 +65,9 @@ class ExperienceEngine:
         }
         
         self.logger.debug(f"Generated scenario: {scenario}")
+        # Add scenario to graph database
+        self.query_engine.add_entity(f"Scenario_{scenario['type']}_{scenario['complexity']}", scenario)
+        
         return scenario
 
     def _generate_delivery_scenario(self, complexity):
@@ -183,6 +190,14 @@ class ExperienceEngine:
 
         self.simulated_environment.update()
 
+        # Add action and outcome to graph database
+        self.query_engine.add_entity(f"Action_{action['type']}", action)
+        self.query_engine.add_entity(f"Outcome_{result['success']}", result)
+        self.query_engine.add_relationship(f"Scenario_{scenario['type']}_{scenario['complexity']}", 
+                                           f"Action_{action['type']}", "RESULTED_IN")
+        self.query_engine.add_relationship(f"Action_{action['type']}", 
+                                           f"Outcome_{result['success']}", "PRODUCED")
+        
         return {
             "success": result["success"],
             "message": result["message"],
@@ -207,6 +222,81 @@ class ExperienceEngine:
     def process_experience(self, experience_data):
         self.advanced_learning_module.learn(experience_data)
         self.multi_modal_processor.process(experience_data)
+
+    async def create_autonomous_application(self, name, purpose):
+        app = AutonomousApplication(name, purpose)
+        self.autonomous_applications[name] = app
+        asyncio.create_task(app.run())
+        return f"Created autonomous application: {name}"
+
+    async def list_autonomous_applications(self):
+        return list(self.autonomous_applications.keys())
+
+    async def get_autonomous_application_state(self, name):
+        if name in self.autonomous_applications:
+            return self.autonomous_applications[name].state
+        return f"Application {name} not found"
+
+    async def ozzie_create_autonomous_agent(self):
+        prompt = f"As Ozzie, an AGI system, create a new autonomous agent. Provide a name and purpose for this agent."
+        response = await self.chat_gpt.chat_with_ollama(prompt)
+        try:
+            agent_info = json.loads(response)
+            name = agent_info.get('name', f"Agent_{len(self.autonomous_applications)}")
+            purpose = agent_info.get('purpose', 'General purpose autonomous agent')
+            return await self.create_autonomous_application(name, purpose)
+        except json.JSONDecodeError:
+            self.logger.error(f"Failed to parse agent creation response: {response}")
+            return "Failed to create agent due to parsing error"
+
+    async def ozzie_manage_agents(self):
+        await self.create_hierarchical_agents(2, 3)  # Create 2 managers, each with 3 workers
+        while True:
+            prompt = f"As Ozzie, analyze the current autonomous agents: {await self.list_autonomous_applications()}. Should I create a new agent, modify an existing one, or take no action? Provide reasoning."
+            response = await self.chat_gpt.chat_with_ollama(prompt)
+            action = self._parse_ozzie_decision(response)
+            
+            if action == 'create':
+                await self.ozzie_create_autonomous_agent()
+            elif action == 'modify':
+                await self._modify_existing_agent()
+            else:
+                self.logger.info("Ozzie decided to take no action at this time.")
+            
+            await asyncio.sleep(60)  # Wait for a minute before next management cycle
+
+    def _parse_ozzie_decision(self, response):
+        # Implement logic to parse Ozzie's decision from the response
+        if "create" in response.lower():
+            return 'create'
+        elif "modify" in response.lower():
+            return 'modify'
+        else:
+            return 'no_action'
+
+    async def _modify_existing_agent(self):
+        # Implement logic for Ozzie to modify an existing agent
+        pass
+
+    async def create_hierarchical_agents(self, num_managers, num_workers_per_manager):
+        for i in range(num_managers):
+            manager_name = f"Manager_{i}"
+            manager_purpose = f"Manage a team of workers to achieve optimal performance"
+            manager = AutonomousApplication(manager_name, manager_purpose, role="Manager")
+            self.autonomous_applications[manager_name] = manager
+            asyncio.create_task(manager.run())
+
+            for j in range(num_workers_per_manager):
+                worker_name = f"Worker_{i}_{j}"
+                worker_purpose = f"Perform tasks assigned by the manager efficiently"
+                worker = AutonomousApplication(worker_name, worker_purpose, role="Worker")
+                self.autonomous_applications[worker_name] = worker
+                asyncio.create_task(worker.run())
+
+                manager.add_subordinate(worker_name)
+                worker.set_manager(manager_name)
+
+        self.logger.info(f"Created {num_managers} managers, each with {num_workers_per_manager} workers")
 
 # Add new classes for advanced functionality
 class AdvancedLearningModule:

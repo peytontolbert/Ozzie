@@ -6,9 +6,8 @@ from knowledge_graph.query_engine import QueryEngine
 from chat_with_ollama import ChatGPT
 
 class AbstractReasoningEngine:
-    def __init__(self, knowledge_graph):
-        self.knowledge_graph = knowledge_graph
-        self.query_engine = QueryEngine(knowledge_graph)
+    def __init__(self, query_engine):
+        self.query_engine = query_engine
         self.logger = Logger("AbstractReasoningEngine")
         self.error_handler = ErrorHandler()
         self.chat_gpt = ChatGPT()
@@ -61,10 +60,16 @@ class AbstractReasoningEngine:
             constraints = scenario.get('constraints', [])
             
             entities = await self._extract_entities(context)
+            for entity in entities:
+                self.query_engine.add_entity(entity)
+            
             actor_goals = self._extract_actor_goals(actors)
             
             related_concepts = await self.query_engine.find_related_concepts(entities)
             patterns = await self._identify_patterns(related_concepts)
+            
+            for i in range(len(entities) - 1):
+                self.query_engine.add_relationship(entities[i], entities[i+1], "RELATED_TO")
             
             conclusions = await self._generate_conclusions(patterns, actor_goals, constraints)
             action_suggestions = await self._generate_action_suggestions(conclusions, scenario)

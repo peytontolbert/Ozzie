@@ -1,0 +1,56 @@
+classDiagram
+    class VirtualEnvironment {
+        +initialize()
+        +run()
+    }
+    class MainMenu {
+        +display()
+        +handleSelection()
+    }
+    class IntroductionScreen {
+        +display()
+        +completeIntro()
+    }
+    class AgentManager {
+        +createAgent()
+        +loadAgent()
+        +saveAgent()
+    }
+    class Agent {
+        -memory
+        -skills
+        -goals
+        +performAction()
+        +learn()
+        +updateGoals()
+    }
+    class MemorySystem {
+        +store()
+        +retrieve()
+    }
+    class SkillSystem {
+        +acquireSkill()
+        +useSkill()
+    }
+    class GoalSystem {
+        +setGoal()
+        +evaluateProgress()
+    }
+    class ExperienceEngine {
+        +generateScenario()
+        +evaluateOutcome()
+    }
+    class LLMInterface {
+        +processThought()
+        +generateResponse()
+    }
+
+    VirtualEnvironment --> MainMenu
+    VirtualEnvironment --> IntroductionScreen
+    VirtualEnvironment --> AgentManager
+    VirtualEnvironment --> ExperienceEngine
+    AgentManager --> Agent
+    Agent --> MemorySystem
+    Agent --> SkillSystem
+    Agent --> GoalSystem
+    ExperienceEngine --> LLMInterface

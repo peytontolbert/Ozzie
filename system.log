@@ -1,0 +1,3 @@
+2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model
+2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model
+2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model

@@ -1,0 +1,1 @@
+2024-09-04 12:25:47,905 - ErrorHandler - ERROR - Error: Agent.__init__() takes 3 positional arguments but 4 were given | Context: Error in autonomous loop

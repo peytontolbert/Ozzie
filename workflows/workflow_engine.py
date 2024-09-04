@@ -1,34 +1,41 @@
+import asyncio
 from base.base_workflow import BaseWorkflow
 from tasks.task_queue import TaskQueue
 from functools import lru_cache
 import json
 from base.concrete_workflow import ConcreteWorkflow
+from utils.logger import Logger
+from utils.error_handler import ErrorHandler
+from chat_with_ollama import ChatGPT
 
 class WorkflowEngine:
     def __init__(self):
         self.workflows = {}
         self.task_queue = TaskQueue()
+        self.logger = Logger("WorkflowEngine")
+        self.error_handler = ErrorHandler()
+        self.chat_gpt = ChatGPT()
 
     def register_workflow(self, workflow_name, workflow):
         if not isinstance(workflow, BaseWorkflow):
             raise TypeError("Workflow must be an instance of BaseWorkflow")
         self.workflows[workflow_name] = workflow
 
-    def execute_workflow(self, workflow_name, *args, **kwargs):
+    async def execute_workflow(self, workflow_name, *args, **kwargs):
         if workflow_name not in self.workflows:
             raise ValueError(f"Workflow '{workflow_name}' not found")
         
         workflow = self.workflows[workflow_name]
-        for step in workflow.steps:
-            self.task_queue.add_task(step, *args, **kwargs)
-        
         results = []
-        while not self.task_queue.is_empty():
-            task, task_args, task_kwargs = self.task_queue.get_next_task()
+        for step in workflow.steps:
             try:
-                result = task(*task_args, **task_kwargs)
+                if asyncio.iscoroutinefunction(step):
+                    result = await step(*args, **kwargs)
+                else:
+                    result = step(*args, **kwargs)
                 results.append(result)
             except Exception as e:
+                self.error_handler.handle_error(e, f"Error executing task in workflow {workflow_name}")
                 results.append(f"Error executing task: {str(e)}")
         
         return results
@@ -45,42 +52,46 @@ class WorkflowEngine:
             return True
         return False
 
-    def generate_workflow(self, intent_str):
-        # Parse the intent string
-        intent = json.loads(intent_str)
-        
-        # Generate steps based on the intent
-        steps = self._generate_steps(intent)
-        
-        # Create and return a new ConcreteWorkflow instance
-        return ConcreteWorkflow(name=f"Workflow for {intent['action']}", steps=steps)
-
-    def _generate_steps(self, intent):
-        steps = []
-        
-        def create_step(message):
-            return lambda: print(message)
-
-        action_handlers = {
-            'inform': self._handle_inform,
-            'recommend': self._handle_recommend,
-            'request': self._handle_request,
-            'book': self._handle_book,
-            'buy': self._handle_buy,
-        }
-
-        handler = action_handlers.get(intent['action'], self._handle_default)
+    async def generate_workflow(self, intent_str):
         try:
-            steps = handler(intent)
+            # Parse the intent string
+            intent = json.loads(intent_str)
+            
+            # Generate steps based on the intent
+            steps = await self._generate_steps(intent)
+            
+            if not steps:
+                self.logger.warning("No steps generated for workflow.")
+                return None
+            
+            # Create and return a new ConcreteWorkflow instance
+            workflow_name = f"Workflow for {intent.get('action', 'unknown_action')}"
+            workflow = ConcreteWorkflow(name=workflow_name, steps=steps)
+            self.register_workflow(workflow_name, workflow)
+            return workflow
+        except json.JSONDecodeError:
+            self.error_handler.handle_error("Invalid JSON in intent string", "Error generating workflow")
+            return None
         except Exception as e:
-            self.logger.error(f"Error generating steps for intent {intent['action']}: {str(e)}")
-            steps = [create_step(f"Error handling intent: {intent['action']}")]
+            self.error_handler.handle_error(e, f"Error generating workflow: {str(e)}")
+            return None
 
-        if not steps:
-            step_name = f"Default step for {intent['action']}"
-            steps.append((step_name, create_step(f"Default step for intent: {intent['action']}")))
+    async def _generate_steps(self, intent):
+        intent_str = json.dumps(intent, indent=2)
+        prompt = f"""Generate a list of steps for a workflow based on the following intent:
+        {intent_str}
+        
+        Each step should be a brief description of an action to take.
+        """
+        response = await self.chat_gpt.chat_with_ollama(prompt)
+        if response.startswith("Error:"):
+            self.logger.warning(f"Failed to generate workflow steps: {response}")
+            return [self._create_step("Default action")]
+        steps = response.strip().split('\n')
+        return [self._create_step(step) for step in steps]
 
-        return steps
+    def _create_step(self, description):
+        return lambda: {"message": description, "action_suggestion": {"type": "default_action"}}
 
     def _handle_inform(self, intent):
         steps = []

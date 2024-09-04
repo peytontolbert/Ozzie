@@ -1,6 +1,24 @@
+from utils.logger import Logger
+from utils.error_handler import ErrorHandler
+
 class QueryEngine:
-    def __init__(self, graph_structure):
-        self.graph_structure = graph_structure
+    def __init__(self, knowledge_graph):
+        self.knowledge_graph = knowledge_graph
+        self.logger = Logger("QueryEngine")
+        self.error_handler = ErrorHandler()
+
+    async def find_related_concepts(self, entities):
+        try:
+            # Implement the logic to find related concepts
+            # This is a placeholder implementation
+            related_concepts = []
+            for entity in entities:
+                # Simulate finding related concepts
+                related_concepts.extend([f"{entity}_related_1", f"{entity}_related_2"])
+            return related_concepts
+        except Exception as e:
+            self.error_handler.handle_error(e, "Error finding related concepts")
+            return []
 
     def execute_query(self, query, parameters=None):
         with self.graph_structure.driver.session() as session:

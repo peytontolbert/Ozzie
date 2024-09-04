@@ -1,0 +1,3 @@
+2024-09-04 13:57:39,150 - WorkflowEngine - WARNING - Failed to generate workflow steps: Error: Connection failed - 200, message='Attempt to decode JSON with unexpected mimetype: application/x-ndjson', url='http://localhost:11434/api/chat'
+2024-09-04 13:57:55,116 - WorkflowEngine - WARNING - Failed to generate workflow steps: Error: Connection failed - 200, message='Attempt to decode JSON with unexpected mimetype: application/x-ndjson', url='http://localhost:11434/api/chat'
+2024-09-04 13:58:14,758 - WorkflowEngine - WARNING - Failed to generate workflow steps: Error: Connection failed - 200, message='Attempt to decode JSON with unexpected mimetype: application/x-ndjson', url='http://localhost:11434/api/chat'

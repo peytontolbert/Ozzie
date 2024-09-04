@@ -1,0 +1,3 @@
+2024-09-04 13:59:28,664 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: Unexpected - 'message'
+2024-09-04 13:59:28,930 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: Unexpected - 'message'
+2024-09-04 13:59:29,213 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: Unexpected - 'message'

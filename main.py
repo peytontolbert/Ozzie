@@ -17,6 +17,11 @@ import asyncio
 from virtual_environment import VirtualEnvironment
 from web_ui import api_endpoints
 from experience_engine import ExperienceEngine
+from cognitive_architecture.abstract_reasoning_engine import AbstractReasoningEngine
+from simulated_environment import SimulatedEnvironment
+from generalized_simulated_environment import GeneralizedSimulatedEnvironment
+import logging
+from utils.logger import Logger
 
 app = FastAPI()
 
@@ -27,6 +32,15 @@ app.include_router(api_endpoints.router)
 
 @app.on_event("startup")
 async def startup_event():
+    # Configure logging
+    logging.basicConfig(level=logging.INFO)
+    
+    logger = Logger("MainApplication")
+    logger.info("Application starting up")
+    logger.debug("This is a debug message")
+    logger.warning("This is a warning message")
+    logger.error("This is an error message")
+    
     global feedback_integrator
     feedback_integrator = FeedbackIntegrator(state_size=10, action_size=5)  # Provide values if needed
     await data_aggregator.connect()
@@ -47,6 +61,7 @@ async def startup_event():
     )
 
     experience_engine = ExperienceEngine()
+    experience_engine.simulated_environment = GeneralizedSimulatedEnvironment()
     if hasattr(experience_engine, 'initialize'):
         experience_engine.initialize()
 
@@ -67,6 +82,20 @@ async def startup_event():
     # Initialize VirtualEnvironment with experience_engine
     ve = VirtualEnvironment(experience_engine)
     ve.initialize()
+
+    # Initialize AbstractReasoningEngine
+    knowledge_graph = app.state.agi_components.get("knowledge_graph")
+    if not knowledge_graph:
+        logger.warning("Knowledge graph not found. Initializing empty knowledge graph.")
+        knowledge_graph = {}  # Or initialize with an appropriate empty structure
+
+    abstract_reasoning_engine = AbstractReasoningEngine(knowledge_graph)
+
+    # Add AbstractReasoningEngine to agi_components
+    app.state.agi_components["abstract_reasoning_engine"] = abstract_reasoning_engine
+
+    # Add WorkflowEngine to agi_components
+    app.state.agi_components["workflow_engine"] = workflow_engine
 
     # Start the autonomous loop
     autonomous_loop = AutonomousLoop(app.state.agi_components, ve)

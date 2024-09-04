@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI Updates</title>
+</head>
+<body>
+    <h1>AGI Updates</h1>
+    <div id="updates"></div>
+
+    <script>
+        const updatesDiv = document.getElementById('updates');
+
+        // Function to fetch updates via HTTP
+        async function fetchUpdates() {
+            const response = await fetch('/updates');
+            const data = await response.json();
+            updatesDiv.innerHTML += `<p>${JSON.stringify(data)}</p>`;
+        }
+
+        // Fetch updates every 10 seconds
+        setInterval(fetchUpdates, 10000);
+
+        // WebSocket connection for real-time updates
+        const ws = new WebSocket(`ws://${window.location.host}/ws`);
+
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            updatesDiv.innerHTML += `<p>Real-time update: ${JSON.stringify(data)}</p>`;
+        };
+
+        ws.onerror = function(event) {
+            console.error("WebSocket error observed:", event);
+        };
+
+        ws.onclose = function(event) {
+            console.log("WebSocket is closed now.");
+        };
+    </script>
+</body>
+</html>

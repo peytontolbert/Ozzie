@@ -1,0 +1,120 @@
+2024-09-04 13:50:34,679 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:34,929 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:35,196 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:38,497 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:38,747 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:38,997 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:42,912 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:43,165 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:43,432 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:46,046 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:46,296 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:46,561 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:50,451 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:50,701 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:50,951 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:53,775 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:54,043 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:54,295 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:56,905 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:57,173 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:50:57,422 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:00,762 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:01,030 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:01,298 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:04,120 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:04,370 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:04,623 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:08,498 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:08,749 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:08,998 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:12,368 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:12,635 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:12,903 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:16,257 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:16,524 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:16,792 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:19,705 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:19,986 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:20,253 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:23,575 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:23,825 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:24,074 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:27,434 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:27,686 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:27,935 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:31,302 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:31,554 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:31,820 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:34,406 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:34,672 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:34,921 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:37,511 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:37,764 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:38,015 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:41,313 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:41,577 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:41,826 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:45,217 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:45,467 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:45,733 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:49,575 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:49,827 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:50,090 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:52,736 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:52,987 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:53,255 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:55,803 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:56,055 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:56,306 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:58,870 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:59,119 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:51:59,371 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:01,921 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:02,188 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:02,439 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:05,836 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:06,102 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:06,352 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:08,920 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:09,185 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:09,436 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:12,036 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:12,302 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:12,568 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:15,876 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:16,126 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:16,409 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:19,015 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:19,280 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:19,550 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:22,122 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:22,373 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:22,641 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:25,505 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:25,785 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:26,036 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:28,605 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:28,856 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:29,105 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:31,973 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:32,240 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:32,492 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:35,323 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:35,576 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:35,826 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:38,428 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:38,678 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:38,928 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:42,847 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:43,115 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:43,366 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:47,282 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:47,531 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:47,797 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:51,702 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:51,954 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:52,224 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:54,840 - AbstractReasoningEngine - WARNING - Failed to extract entities: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:55,094 - AbstractReasoningEngine - WARNING - Failed to identify patterns: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}
+2024-09-04 13:52:55,360 - AbstractReasoningEngine - WARNING - Failed to generate action suggestions: Error: 404 - {"error":"model \"llama2\" not found, try pulling it first"}

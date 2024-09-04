@@ -1,0 +1,4 @@
+2024-09-04 12:25:46,655 - MainApplication - INFO - Application starting up
+2024-09-04 12:25:46,655 - MainApplication - DEBUG - This is a debug message
+2024-09-04 12:25:46,657 - MainApplication - WARNING - This is a warning message
+2024-09-04 12:25:46,657 - MainApplication - ERROR - This is an error message

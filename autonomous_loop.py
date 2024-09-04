@@ -1,5 +1,6 @@
 import asyncio
 import json
+import random
 from workflows.workflow_engine import WorkflowEngine
 from workflows.workflow_optimizer import WorkflowOptimizer
 from human_agi_interface.augmented_intelligence_interface import AugmentedIntelligenceInterface
@@ -10,12 +11,13 @@ from human_agi_interface.long_term_impact_analyzer import LongTermImpactAnalyzer
 from human_agi_interface.feedback_integrator import FeedbackIntegrator
 from datetime import datetime
 import numpy as np
+from cognitive_architecture.abstract_reasoning_engine import AbstractReasoningEngine
 
 class AutonomousLoop:
     def __init__(self, agi_components, virtual_environment):
         self.agi_components = agi_components
         self.virtual_environment = virtual_environment
-        self.workflow_engine = WorkflowEngine()
+        self.workflow_engine = agi_components['workflow_engine']
         self.workflow_optimizer = WorkflowOptimizer(self.workflow_engine)
         self.augmented_intelligence = agi_components['augmented_intelligence_interface']
         self.logger = Logger("AutonomousLoop")
@@ -25,38 +27,135 @@ class AutonomousLoop:
         self.experience_engine = agi_components.get('experience_engine')
         if not self.experience_engine:
             raise ValueError("experience_engine is required in agi_components")
+        self.abstract_reasoning_engine = agi_components['abstract_reasoning_engine']
 
     async def run(self):
+        self.logger.info("Starting autonomous loop")
         while True:
             try:
-                # Generate a scenario
+                self.logger.debug("Generating new scenario")
                 scenario = await self.agi_components['experience_engine'].generate_scenario()
+                self.logger.debug(f"Generated scenario: {scenario}")
+
                 if not scenario:
                     self.logger.warning("Failed to generate scenario. Skipping this cycle.")
                     continue
 
-                # Process the scenario and generate an action
+                self.logger.debug("Processing scenario")
                 action = await self.process_scenario(scenario)
+                self.logger.debug(f"Selected action: {action}")
 
-                # Evaluate the outcome
+                self.logger.debug("Evaluating outcome")
                 outcome = await self.agi_components['experience_engine'].evaluate_outcome(action, scenario)
+                self.logger.debug(f"Evaluation outcome: {outcome}")
 
-                # Process the cycle
+                self.logger.info(f"Cycle completed. Action: {action}, Outcome: {outcome}")
+
                 await self.virtual_environment.process_autonomous_cycle(
                     {"scenario": scenario, "action": action, "outcome": outcome},
                     "Autonomous cycle completed successfully."
                 )
 
-                # Wait for a short time before the next cycle
                 await asyncio.sleep(1)
             except Exception as e:
                 self.error_handler.handle_error(e, "Error in autonomous loop")
                 await asyncio.sleep(5)  # Wait a bit longer before retrying after an error
 
     async def process_scenario(self, scenario):
-        # Implement your scenario processing logic here
-        # This is a placeholder implementation
-        return "Default action"
+        try:
+            self.logger.debug("Applying abstract reasoning")
+            reasoning_result = await self.abstract_reasoning_engine.apply_reasoning(scenario)
+            self.logger.debug(f"Reasoning result: {reasoning_result}")
+            
+            if not reasoning_result:
+                self.logger.warning("Empty reasoning result. Using default action.")
+                return {"type": "default_action"}
+            
+            self.logger.debug("Generating workflow")
+            workflow = await self.workflow_engine.generate_workflow(json.dumps(reasoning_result))
+            self.logger.debug(f"Generated workflow: {workflow}")
+            
+            if not workflow:
+                self.logger.warning("Failed to generate workflow. Using default action.")
+                return {"type": "default_action"}
+            
+            self.logger.debug(f"Executing workflow: {workflow.name}")
+            workflow_result = await self.workflow_engine.execute_workflow(workflow.name)
+            self.logger.debug(f"Workflow execution result: {workflow_result}")
+            
+            self.logger.debug("Selecting action")
+            action = await self._select_action(scenario, reasoning_result, workflow_result)
+            
+            if not action or 'type' not in action:
+                self.logger.warning("Invalid action selected. Using default action.")
+                action = {"type": "default_action"}
+            
+            self.logger.info(f"Selected action: {action}")
+            return action
+        except Exception as e:
+            self.error_handler.handle_error(e, f"Error processing scenario: {str(e)}")
+            return {"type": "default_action"}
+
+    async def _select_action(self, scenario, reasoning_result, workflow_result):
+        try:
+            self.logger.debug(f"Selecting action for scenario: {scenario}")
+            self.logger.debug(f"Reasoning result: {reasoning_result}")
+            self.logger.debug(f"Workflow result: {workflow_result}")
+
+            environment_state = scenario.get('environment_state', {})
+            entities = environment_state.get('entities', {})
+            
+            action_options = []
+
+            for entity_id, entity in entities.items():
+                if isinstance(entity, dict) and entity.get('properties', {}).get('status') == 'idle':
+                    # For each idle entity, generate possible actions
+                    nearby_entities = self._get_nearby_entities(entity, entities)
+                    
+                    for nearby_entity_id in nearby_entities:
+                        action_options.append({
+                            "type": "interact",
+                            "entity_id": entity_id,
+                            "target_id": nearby_entity_id
+                        })
+                    
+                    # Always add a move action
+                    action_options.append({
+                        "type": "move",
+                        "entity_id": entity_id,
+                        "direction": self._generate_random_direction()
+                    })
+
+            if not action_options:
+                self.logger.warning("No valid actions found. Returning wait action.")
+                return {"type": "wait"}
+
+            # Consider workflow_result in action selection
+            if workflow_result:
+                for result in workflow_result:
+                    if isinstance(result, dict) and 'action_suggestion' in result:
+                        action_options.append(result['action_suggestion'])
+
+            selected_action = random.choice(action_options)
+            self.logger.debug(f"Selected action from options: {selected_action}")
+            return selected_action
+        except Exception as e:
+            self.error_handler.handle_error(e, f"Error selecting action: {str(e)}")
+            return {"type": "default_action"}
+
+    def _get_nearby_entities(self, entity, entities, range=10.0):
+        nearby_entities = []
+        entity_position = entity.get('position', (0, 0, 0))
+        for other_id, other_entity in entities.items():
+            if other_id != entity['id']:
+                other_position = other_entity.get('position', (0, 0, 0))
+                distance = sum((a - b) ** 2 for a, b in zip(entity_position, other_position)) ** 0.5
+                if distance <= range:
+                    nearby_entities.append(other_id)
+        return nearby_entities
+
+    def _generate_random_direction(self):
+        return tuple(random.uniform(-1, 1) for _ in range(3))
 
     async def execute_workflow(self, workflow):
         self.logger.info(f"Executing workflow: {workflow.name}")

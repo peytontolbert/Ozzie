@@ -1,0 +1,13 @@
+2024-09-04 12:50:24,758 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:29,774 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:34,793 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:39,776 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:44,791 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:49,812 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:54,830 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:50:59,856 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:51:04,872 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:51:09,884 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:51:14,904 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:51:19,917 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop
+2024-09-04 12:51:24,923 - ErrorHandler - ERROR - Error: ChatGPT.chat_with_ollama() missing 1 required positional argument: 'prompt' | Context: Error in autonomous loop

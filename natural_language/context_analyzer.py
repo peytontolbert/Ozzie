@@ -1,45 +1,51 @@
 from utils.logger import Logger
 from utils.error_handler import ErrorHandler
+from chat_with_ollama import ChatGPT
+import json
 
 class ContextAnalyzer:
-    def __init__(self, nl_parser):
-        self.nl_parser = nl_parser
+    def __init__(self):
         self.logger = Logger("ContextAnalyzer")
         self.error_handler = ErrorHandler()
-        self.context = {}
+        self.chat_gpt = ChatGPT()
 
-    def analyze_context(self, text, additional_context=None):
+    async def analyze_context(self, text):
         try:
-            parsed_text = self.nl_parser.parse(text)
-            if not parsed_text:
-                return None
-
-            self.context = {
-                'entities': parsed_text['entities'],
-                'keywords': self.nl_parser.extract_keywords(text),
-                'sentiment': self.nl_parser.analyze_sentiment(text)
-            }
-
-            if additional_context:
-                self.context.update(additional_context)
-
-            return self.context
+            system_prompt = "You are an AI that analyzes the context of given text. Provide entities, key phrases, sentiment, and main topics in JSON format."
+            prompt = f"Analyze the context of the following text:\n\n{text}"
+            
+            response = await self.chat_gpt.chat_with_ollama(system_prompt, prompt)
+            return self._parse_json_response(response)
         except Exception as e:
             self.error_handler.handle_error(e, "Error analyzing context")
             return None
 
-    def get_relevant_context(self, query):
+    async def compare_contexts(self, context1, context2):
         try:
-            query_keywords = set(self.nl_parser.extract_keywords(query))
+            system_prompt = "You are an AI that compares two contexts and determines their similarity. Respond in JSON format with a 'similarity_score' and 'explanation' fields."
+            prompt = f"Compare the following contexts and determine their similarity:\nContext 1: {context1}\nContext 2: {context2}"
+            
+            response = await self.chat_gpt.chat_with_ollama(system_prompt, prompt)
+            return self._parse_json_response(response)
+        except Exception as e:
+            self.error_handler.handle_error(e, "Error comparing contexts")
+            return None
+
+    def _parse_json_response(self, response):
+        try:
+            return json.loads(response)
+        except json.JSONDecodeError:
+            self.logger.warning("Failed to parse JSON response, returning raw text")
+            return {"raw_text": response}
+
+    def get_relevant_context(self, query, context):
+        try:
+            query_keywords = set(self.extract_keywords(query))
             relevant_context = {}
 
-            for key, value in self.context.items():
-                if isinstance(value, list):
-                    relevant_items = [item for item in value if any(keyword in str(item).lower() for keyword in query_keywords)]
-                    if relevant_items:
-                        relevant_context[key] = relevant_items
-                elif isinstance(value, dict):
-                    relevant_items = {k: v for k, v in value.items() if any(keyword in str(k).lower() or keyword in str(v).lower() for keyword in query_keywords)}
+            for key, value in context.items():
+                if isinstance(value, (list, dict)):
+                    relevant_items = self._filter_relevant_items(value, query_keywords)
                     if relevant_items:
                         relevant_context[key] = relevant_items
                 elif any(keyword in str(value).lower() for keyword in query_keywords):
@@ -50,9 +56,15 @@ class ContextAnalyzer:
             self.error_handler.handle_error(e, "Error getting relevant context")
             return None
 
-    def update_context(self, new_context):
-        try:
-            self.context.update(new_context)
-            self.logger.info("Context updated successfully")
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error updating context")
+    def _filter_relevant_items(self, items, keywords):
+        if isinstance(items, list):
+            return [item for item in items if any(keyword in str(item).lower() for keyword in keywords)]
+        elif isinstance(items, dict):
+            return {k: v for k, v in items.items() if any(keyword in str(k).lower() or keyword in str(v).lower() for keyword in keywords)}
+        return items
+
+    def extract_keywords(self, text):
+        # Simple keyword extraction (you might want to use a more sophisticated method)
+        words = text.lower().split()
+        return [word for word in words if len(word) > 3]
+

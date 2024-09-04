@@ -1,5 +1,7 @@
 from base.base_workflow import BaseWorkflow
 from tasks.task_queue import TaskQueue
+from functools import lru_cache
+import json
 
 class WorkflowEngine:
     def __init__(self):
@@ -41,3 +43,26 @@ class WorkflowEngine:
             del self.workflows[workflow_name]
             return True
         return False
+
+    @lru_cache(maxsize=100)
+    def generate_workflow(self, intent_str):
+        # Convert the intent dict to a string for hashing
+        intent = json.loads(intent_str)
+        steps = [
+            f"Analyze intent: {intent}",
+            "Identify required tasks",
+            "Determine task dependencies",
+            "Create task sequence",
+            "Allocate resources",
+            "Execute tasks",
+            "Monitor progress",
+            "Handle exceptions",
+            "Evaluate results",
+            "Provide feedback"
+        ]
+        
+        workflow = BaseWorkflow(f"Workflow for {intent['action']}")
+        for step in steps:
+            workflow.add_step(lambda s=step: print(f"Executing: {s}"))
+        
+        return workflow  # Return the workflow object directly

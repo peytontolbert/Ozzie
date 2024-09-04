@@ -6,10 +6,9 @@ class WorkflowOptimizer:
     def __init__(self, workflow_engine):
         self.workflow_engine = workflow_engine
 
-    def optimize_workflow(self, workflow_name):
-        workflow = self.workflow_engine.get_workflow(workflow_name)
-        if not workflow:
-            raise ValueError(f"Workflow '{workflow_name}' not found")
+    def optimize_workflow(self, workflow):
+        if not isinstance(workflow, BaseWorkflow):
+            raise ValueError(f"Expected BaseWorkflow, got {type(workflow)}")
 
         optimized_steps = []
         step_times = []
@@ -34,7 +33,7 @@ class WorkflowOptimizer:
             else:
                 optimized_steps.append((step, "sequential"))
 
-        return self.create_optimized_workflow(workflow_name, optimized_steps)
+        return self.create_optimized_workflow(workflow.name, optimized_steps)
 
     def can_parallelize(self, step, existing_steps):
         # This is a simplified check. In a real system, you'd need to analyze

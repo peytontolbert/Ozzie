@@ -54,18 +54,18 @@ async def startup_event():
         "workflow_optimizer": workflow_optimizer
     }
 
+    # Initialize VirtualEnvironment
+    ve = VirtualEnvironment()
+    ve.initialize()
+
     # Start the autonomous loop
-    autonomous_loop = AutonomousLoop(app.state.agi_components)
+    autonomous_loop = AutonomousLoop(app.state.agi_components, ve)
     asyncio.create_task(autonomous_loop.run())
 
 @app.on_event("shutdown")
 async def shutdown_event():
     await data_aggregator.disconnect()
 
-def main():
-    ve = VirtualEnvironment()
-    ve.initialize()
-    ve.run()
-
 if __name__ == "__main__":
-    main()
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -1,42 +1,34 @@
 from utils.logger import Logger
 from utils.error_handler import ErrorHandler
-
+from typing import Dict, Any
 class ExplanationGenerator:
     def __init__(self):
+        self.explanation_levels = ["simple", "detailed", "technical"]
         self.logger = Logger("ExplanationGenerator")
         self.error_handler = ErrorHandler()
 
-    def generate_explanation(self, decision, context, complexity_level='medium'):
-        try:
-            explanation = self._create_base_explanation(decision, context)
-            explanation = self._adjust_complexity(explanation, complexity_level)
-            self.logger.info(f"Generated explanation: {explanation}")
-            return explanation
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error generating explanation")
-            return "Unable to generate explanation at this time."
+    def generate(self, result: Dict[str, Any], impact: Dict[str, float], is_aligned: bool) -> str:
+        explanation = f"Action result: {self._format_result(result)}\n"
+        explanation += f"Impact: {impact}\n"
+        explanation += f"Alignment: {'Aligned' if is_aligned else 'Not aligned'}\n"
+        return explanation
 
-    def _create_base_explanation(self, decision, context):
-        try:
-            explanation = f"The decision to {decision} was made based on the following factors:\n"
-            for factor, importance in context.items():
-                explanation += f"- {factor.capitalize()}: {importance}\n"
-            return explanation
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error creating base explanation")
-            return "Base explanation creation failed."
+    def generate_multilevel_explanation(self, result, impact, is_aligned):
+        explanations = {}
+        for level in self.explanation_levels:
+            explanations[level] = self._generate_explanation_by_level(result, impact, is_aligned, level)
+        return explanations
 
-    def _adjust_complexity(self, explanation, complexity_level):
-        try:
-            if complexity_level == 'low':
-                return self._simplify_explanation(explanation)
-            elif complexity_level == 'high':
-                return self._elaborate_explanation(explanation)
-            else:
-                return explanation
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error adjusting explanation complexity")
-            return explanation
+    def _generate_explanation_by_level(self, result, impact, is_aligned, level):
+        if level == "simple":
+            return self._simplify_explanation(self.generate(result, impact, is_aligned))
+        elif level == "detailed":
+            return self.generate(result, impact, is_aligned)
+        elif level == "technical":
+            return self._elaborate_explanation(self.generate(result, impact, is_aligned))
+
+    def _format_result(self, result: Dict[str, Any]) -> str:
+        return ", ".join(f"{k}: {v}" for k, v in result.items())
 
     def _simplify_explanation(self, explanation):
         # This is a placeholder for a more sophisticated simplification algorithm
@@ -45,10 +37,10 @@ class ExplanationGenerator:
 
     def _elaborate_explanation(self, explanation):
         # This is a placeholder for a more sophisticated elaboration algorithm
-        elaborated = explanation + "\nAdditional context and implications:\n"
-        elaborated += "- Long-term effects: [Placeholder for long-term analysis]\n"
-        elaborated += "- Alternative scenarios: [Placeholder for alternative scenarios]\n"
-        elaborated += "- Confidence level: [Placeholder for confidence assessment]\n"
+        elaborated = explanation + "\nAdditional technical details:\n"
+        elaborated += "- Implementation specifics: [Placeholder]\n"
+        elaborated += "- Performance metrics: [Placeholder]\n"
+        elaborated += "- Error analysis: [Placeholder]\n"
         return elaborated
 
     def generate_step_by_step_explanation(self, process, steps):

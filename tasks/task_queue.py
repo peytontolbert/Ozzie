@@ -8,7 +8,9 @@ class TaskQueue:
         self.queue.append((task, args, kwargs))
 
     def get_next_task(self):
-        return self.queue.popleft()
+        if not self.is_empty():
+            return self.queue.popleft()
+        return None
 
     def is_empty(self):
         return len(self.queue) == 0

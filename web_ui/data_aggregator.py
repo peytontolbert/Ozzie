@@ -1,5 +1,6 @@
 from neo4j import AsyncGraphDatabase
 import os
+import asyncio
 
 class DataAggregator:
     def __init__(self, uri=None, user=None, password=None):
@@ -31,7 +32,6 @@ class DataAggregator:
         }
 
 # Usage example (can be removed in production)
-import asyncio
 
 async def main():
     aggregator = DataAggregator()

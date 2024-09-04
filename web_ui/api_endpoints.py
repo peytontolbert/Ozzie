@@ -4,11 +4,12 @@ from pydantic import BaseModel
 from typing import List, Dict, Any
 from .data_aggregator import DataAggregator
 from .authentication_handler import get_current_user, User
-
+from utils.error_handler import ErrorHandler
 import os
 
 app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+error_handler = ErrorHandler()
 
 # Initialize DataAggregator with Neo4j connection details
 data_aggregator = DataAggregator(
@@ -66,9 +67,15 @@ async def simulate_decision(scenario: Dict[str, Any], current_user: User = Depen
 
 @app.post("/api/analyze-impact")
 async def analyze_impact(action: Dict[str, Any], current_user: User = Depends(get_current_user)):
-    analyzer = app.state.agi_components["long_term_impact_analyzer"]
-    impact = analyzer.analyze_long_term_impact(action)
-    return impact
+    try:
+        analyzer = app.state.agi_components["long_term_impact_analyzer"]
+        impact = analyzer.analyze(action)
+        if not impact:
+            raise HTTPException(status_code=500, detail="Failed to analyze impact")
+        return impact
+    except Exception as e:
+        error_handler.handle_error(e, "Error analyzing impact")
+        raise HTTPException(status_code=500, detail="Error analyzing impact")
 
 # Add more endpoints for other AGI components as needed
 
@@ -82,3 +89,46 @@ async def get_ozzie_status(current_user: User = Depends(get_current_user)):
         "progress": 0.75,
         "last_output": "Successfully created a new machine learning model"
     }
+
+# Add this new endpoint
+@app.get("/api/agent-status")
+async def get_agent_status(current_user: User = Depends(get_current_user)):
+    try:
+        if app.state.virtual_environment.current_agent:
+            return app.state.virtual_environment.current_agent.get_status()
+        else:
+            return {"error": "No agent currently active"}
+    except Exception as e:
+        error_handler.handle_error(e, "Error getting agent status")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+# Update the existing endpoint
+@app.get("/api/ozzie-status")
+async def get_ozzie_status(current_user: User = Depends(get_current_user)):
+    try:
+        ve = app.state.virtual_environment
+        return {
+            "status": "active" if ve.current_agent else "idle",
+            "current_agent": ve.current_agent.name if ve.current_agent else None,
+            "last_scenario": ve.experience_engine.last_scenario if hasattr(ve.experience_engine, 'last_scenario') else None,
+            "last_action": ve.experience_engine.last_action if hasattr(ve.experience_engine, 'last_action') else None,
+            "last_outcome": ve.experience_engine.last_outcome if hasattr(ve.experience_engine, 'last_outcome') else None
+        }
+    except Exception as e:
+        error_handler.handle_error(e, "Error getting Ozzie status")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+# Add this new endpoint
+@app.get("/updates")
+async def get_updates(current_user: User = Depends(get_current_user)):
+    try:
+        # Implement logic to fetch and return recent updates
+        return {
+            "updates": [
+                {"timestamp": "2024-09-04 02:10:03", "message": "New intent interpreted"},
+                {"timestamp": "2024-09-04 02:11:06", "message": "Workflow executed"}
+            ]
+        }
+    except Exception as e:
+        error_handler.handle_error(e, "Error getting updates")
+        raise HTTPException(status_code=500, detail="Internal server error")

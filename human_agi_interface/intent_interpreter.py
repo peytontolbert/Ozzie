@@ -1,46 +1,24 @@
-import spacy
+from chat_with_ollama import ChatGPT
 from utils.logger import Logger
 from utils.error_handler import ErrorHandler
+import json
 
 class IntentInterpreter:
     def __init__(self):
         self.logger = Logger("IntentInterpreter")
         self.error_handler = ErrorHandler()
-        try:
-            self.nlp = spacy.load("en_core_web_sm")
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error loading spaCy model")
-            self.nlp = None
+        self.chat_gpt = ChatGPT()
 
-    def interpret_intent(self, user_input):
-        if not self.nlp:
-            self.logger.error("spaCy model not loaded. Cannot interpret intent.")
-            return None
-
+    async def interpret(self, input_data):
         try:
-            doc = self.nlp(user_input)
+            text = input_data.get('data', '')
+            system_prompt = "You are an AI assistant that interprets user intents. Extract the action, subject, object, entities, and sentiment from the following input. Respond in JSON format."
+            prompt = text
+
+            response = await self.chat_gpt.chat_with_ollama(system_prompt, prompt)
             
-            # Extract main verb and its object
-            main_verb = None
-            main_object = None
-            for token in doc:
-                if token.dep_ == "ROOT" and token.pos_ == "VERB":
-                    main_verb = token.lemma_
-                if token.dep_ in ["dobj", "pobj"] and not main_object:
-                    main_object = token.text
-
-            # Identify entities
-            entities = [(ent.text, ent.label_) for ent in doc.ents]
-
-            # Determine overall sentiment
-            sentiment = doc.sentiment
-
-            intent = {
-                "action": main_verb,
-                "object": main_object,
-                "entities": entities,
-                "sentiment": sentiment
-            }
+            # Parse the response to extract intent components
+            intent = self._parse_ollama_response(response)
 
             self.logger.info(f"Interpreted intent: {intent}")
             return intent
@@ -48,33 +26,34 @@ class IntentInterpreter:
             self.error_handler.handle_error(e, "Error interpreting intent")
             return None
 
-    def classify_intent(self, intent):
+    def _parse_ollama_response(self, response):
         try:
-            if intent["action"] in ["search", "find", "look"]:
-                return "QUERY"
-            elif intent["action"] in ["create", "make", "generate"]:
-                return "CREATE"
-            elif intent["action"] in ["update", "modify", "change"]:
-                return "UPDATE"
-            elif intent["action"] in ["delete", "remove", "erase"]:
-                return "DELETE"
-            else:
-                return "UNKNOWN"
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error classifying intent")
-            return "UNKNOWN"
+            # Attempt to parse the response as JSON
+            intent = json.loads(response)
+            # Ensure all required keys are present
+            required_keys = ['action', 'subject', 'object', 'entities', 'sentiment']
+            for key in required_keys:
+                if key not in intent:
+                    intent[key] = None
+            return intent
+        except json.JSONDecodeError:
+            # If JSON parsing fails, attempt to extract information using regex
+            import re
+            intent = {}
+            patterns = {
+                'action': r'"action":\s*"([^"]*)"',
+                'subject': r'"subject":\s*"([^"]*)"',
+                'object': r'"object":\s*"([^"]*)"',
+                'sentiment': r'"sentiment":\s*"([^"]*)"'
+            }
+            for key, pattern in patterns.items():
+                match = re.search(pattern, response)
+                intent[key] = match.group(1) if match else None
+            intent['entities'] = []  # Simplified entity extraction
+            return intent
 
-    def extract_parameters(self, intent):
-        try:
-            parameters = {}
-            for entity in intent["entities"]:
-                if entity[1] in ["PERSON", "ORG", "GPE"]:
-                    parameters["subject"] = entity[0]
-                elif entity[1] in ["DATE", "TIME"]:
-                    parameters["time"] = entity[0]
-                elif entity[1] == "CARDINAL":
-                    parameters["quantity"] = entity[0]
-            return parameters
-        except Exception as e:
-            self.error_handler.handle_error(e, "Error extracting parameters")
-            return {}
+    def extract_keywords(self, text):
+        # Implement keyword extraction logic
+        # This could use NLP techniques or simply return important words
+        words = text.split()
+        return [word.lower() for word in words if len(word) > 3]

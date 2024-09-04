@@ -1,16 +1,15 @@
-import traceback
-from utils.logger import Logger
+import logging
 
 class ErrorHandler:
     def __init__(self):
-        self.logger = Logger("ErrorHandler")
+        self.logger = logging.getLogger(__name__)
 
-    def handle_error(self, error, context=None):
-        error_message = f"Error: {str(error)}"
-        if context:
-            error_message += f" | Context: {context}"
-        self.logger.error(error_message)
-        self.logger.debug(traceback.format_exc())
+    def handle_error(self, error, context):
+        self.logger.error(f"Error: {str(error)} | Context: {context}")
+        # Implement additional error handling logic here, such as:
+        # - Sending error notifications
+        # - Attempting to recover from the error
+        # - Logging additional debug information
 
     def raise_error(self, error_type, message, context=None):
         self.handle_error(f"{error_type}: {message}", context)

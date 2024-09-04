@@ -1,3 +1,118 @@
 2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model
 2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model
 2024-09-04 01:01:56,038 - ErrorHandler - ERROR - Error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory. | Context: Error loading spaCy model
+2024-09-04 01:54:09,078 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:54:09,078 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:54:09,078 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:55:09,076 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:55:09,076 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:55:09,076 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:56:09,081 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:56:09,081 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:56:09,081 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A62490> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:57:09,090 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:57:09,090 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 01:57:09,090 - ErrorHandler - ERROR - Error: Workflow 'Workflow: Workflow for <coroutine object IntentInterpreter.interpret at 0x00000262D9A625E0> with 10 steps' not found | Context: Error in autonomous loop
+2024-09-04 02:01:50,455 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:02:04,347 - IntentInterpreter - INFO - Interpreted intent: {'action': 'offer', 'subject': 'you', 'object': 'a ride', 'entities': [{'type': 'transportation', 'value': 'ride'}], 'sentiment': 'positive'}
+2024-09-04 02:02:04,347 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:02:04,347 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:02:04,347 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:02:04,347 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:03:07,293 - IntentInterpreter - INFO - Interpreted intent: {'action': 'provide information', 'subject': 'hotel booking', 'object': None, 'entities': [{'name': 'hotel', 'type': 'lodging'}, {'name': 'booking', 'type': 'transaction'}], 'sentiment': 'neutral'}
+2024-09-04 02:03:07,293 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:03:07,293 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:03:07,293 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:03:07,293 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:04:10,134 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'movie', 'object': 'recommendation', 'entities': [{'name': 'genre', 'value': 'romantic comedy'}], 'sentiment': 'positive'}
+2024-09-04 02:04:10,134 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:04:10,134 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:04:10,134 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:04:10,134 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:05:12,884 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'movie', 'object': None, 'entities': [{'name': 'action', 'type': 'genre'}], 'sentiment': 'positive'}
+2024-09-04 02:05:12,884 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:05:12,884 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:05:12,884 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:05:12,884 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:06:15,678 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'information', 'object': 'restaurant', 'entities': [{'name': 'restaurant', 'type': 'establishment'}], 'sentiment': 'neutral'}
+2024-09-04 02:06:15,679 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:06:15,679 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:06:15,679 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:06:15,679 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:07:18,517 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for advice', 'subject': 'job search', 'object': None, 'entities': [{'name': 'job search', 'type': 'topic'}], 'sentiment': 'neutral'}
+2024-09-04 02:07:18,517 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:07:18,517 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:07:18,517 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:07:18,517 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:08:21,589 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'restaurant', 'object': 'reservation', 'entities': [{'type': 'date', 'value': 'next Friday'}, {'type': 'time', 'value': '7:30 PM'}, {'type': 'party_size', 'value': '4 people'}], 'sentiment': 'neutral'}
+2024-09-04 02:08:21,590 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:08:21,590 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:08:21,590 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:08:21,590 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:09:24,291 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'movie', 'object': 'recommendation', 'entities': ['genre', 'actor'], 'sentiment': 'neutral'}
+2024-09-04 02:09:24,291 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:09:24,291 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:09:24,291 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:09:24,291 - ErrorHandler - ERROR - Error: Expected BaseWorkflow, got <class 'str'> | Context: Error in autonomous loop
+2024-09-04 02:10:00,220 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:10:03,168 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie recommendation', 'object': None, 'entities': [{'name': 'genre', 'value': 'sci-fi'}, {'name': 'rating', 'value': 'highly-rated'}], 'sentiment': 'positive'}
+2024-09-04 02:11:06,017 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'movie', 'object': 'information', 'entities': [{'name': 'movie title', 'value': 'The Shawshank Redemption'}], 'sentiment': 'positive'}
+2024-09-04 02:12:09,038 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'the user', 'object': 'a trip', 'entities': [{'type': 'destination', 'value': 'New York'}, {'type': 'purpose', 'value': 'vacation'}], 'sentiment': 'positive'}
+2024-09-04 02:12:47,447 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:12:50,345 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'clothes', 'object': None, 'entities': [{'name': 'shop', 'value': 'Zara'}], 'sentiment': 'positive'}
+2024-09-04 02:12:50,346 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:12:50,346 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:13:53,142 - IntentInterpreter - INFO - Interpreted intent: {'action': 'meeting', 'subject': 'upcoming project deadline', 'object': None, 'entities': [{'name': 'project deadline'}], 'sentiment': 'neutral'}
+2024-09-04 02:13:53,142 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:13:53,142 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:14:48,073 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:14:50,807 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'recommendation', 'entities': ['genre', 'author'], 'sentiment': 'positive'}
+2024-09-04 02:14:50,814 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:14:50,814 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:15:53,914 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'hotel booking', 'object': None, 'entities': [{'name': 'date', 'value': 'next Friday'}, {'name': 'location', 'value': 'near the beach'}], 'sentiment': 'neutral'}
+2024-09-04 02:15:53,919 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:15:53,919 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:17:02,810 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:17:05,847 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'movie', 'object': None, 'entities': [{'name': 'Drama', 'type': 'genre'}, {'name': 'Oscar-winning film', 'type': 'award'}], 'sentiment': 'positive'}
+2024-09-04 02:17:05,852 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:17:05,852 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:18:38,972 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:18:41,778 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'restaurant reservation', 'object': 'making a reservation at a restaurant', 'entities': ['restaurant', 'date', 'time'], 'sentiment': 'neutral'}
+2024-09-04 02:18:41,782 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:18:41,783 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:19:37,616 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:19:40,659 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'book', 'object': 'flight', 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'departure_date', 'value': 'June 15th'}], 'sentiment': 'neutral'}
+2024-09-04 02:19:40,663 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:19:40,664 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:23:39,616 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:23:42,393 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'movie recommendations', 'object': None, 'entities': [{'name': 'user', 'value': 'person seeking movie recommendations'}], 'sentiment': 'neutral'}
+2024-09-04 02:23:42,398 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:23:42,398 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:24:39,739 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:24:42,553 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'movie', 'object': 'recommendation', 'entities': [{'name': 'The Shawshank Redemption', 'type': 'movie'}], 'sentiment': 'positive'}
+2024-09-04 02:24:42,558 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:24:42,558 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:26:47,065 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:26:49,791 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a room', 'subject': 'user', 'object': 'room', 'entities': ['hotel', 'check-in date'], 'sentiment': 'neutral'}
+2024-09-04 02:26:49,796 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:26:49,796 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:27:19,862 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:27:22,845 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'user', 'object': 'trip', 'entities': [{'name': 'destination', 'value': 'Italy'}, {'name': 'travelers', 'value': 'family'}], 'sentiment': 'positive'}
+2024-09-04 02:27:22,849 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:27:22,849 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:28:25,751 - IntentInterpreter - INFO - Interpreted intent: {'action': 'provide information', 'subject': 'movie', 'object': None, 'entities': [{'name': 'movie', 'value': 'The Shawshank Redemption'}], 'sentiment': 'positive'}
+2024-09-04 02:28:25,755 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:28:25,755 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:29:28,632 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'weather', 'object': None, 'entities': [{'name': 'weather', 'type': 'topic'}], 'sentiment': 'neutral'}
+2024-09-04 02:29:28,637 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:29:28,637 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:30:31,520 - IntentInterpreter - INFO - Interpreted intent: {'action': 'provide information', 'subject': 'artificial intelligence', 'object': None, 'entities': [{'name': 'AI', 'type': 'technology'}], 'sentiment': 'neutral'}
+2024-09-04 02:30:31,526 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:30:31,526 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:31:34,462 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'the customer', 'object': 'a new car', 'entities': [{'name': 'vehicle', 'value': 'car'}], 'sentiment': 'positive'}
+2024-09-04 02:31:34,467 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:31:34,467 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:32:42,217 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:32:45,008 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'the user', 'object': 'a trip', 'entities': [{'name': 'destination', 'value': 'Hawaii'}], 'sentiment': 'positive'}
+2024-09-04 02:32:45,013 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:32:45,013 - AutonomousLoop - INFO - Error recovery attempt completed.

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Union
 import logging
 
 logger = logging.getLogger(__name__)
@@ -10,50 +10,37 @@ class EthicalPrinciple:
 
 class ValueAlignmentVerifier:
     def __init__(self):
-        self.ethical_principles = self._initialize_ethical_principles()
-
-    def _initialize_ethical_principles(self) -> List[EthicalPrinciple]:
-        return [
-            EthicalPrinciple("Beneficence", "AI should act in the best interest of humans"),
-            EthicalPrinciple("Non-maleficence", "AI should not harm humans"),
-            EthicalPrinciple("Autonomy", "AI should respect human freedom of choice"),
-            EthicalPrinciple("Justice", "AI should treat all humans fairly and equally"),
-            EthicalPrinciple("Explicability", "AI's decisions should be transparent and explainable")
+        self.alignment_rules = [
+            lambda action: "harm" not in self._get_action_string(action).lower(),
+            lambda action: "ethical" in self._get_action_string(action).lower(),
+            lambda action: "beneficial" in self._get_action_string(action).lower(),
         ]
 
-    def verify_alignment(self, action: Dict[str, Any]) -> bool:
-        for principle in self.ethical_principles:
-            if not self._check_principle_alignment(action, principle):
-                logger.warning(f"Action {action['name']} violates principle: {principle.name}")
-                return False
-        logger.info(f"Action {action['name']} is aligned with all ethical principles")
-        return True
+    def verify_alignment(self, action: Union[Dict[str, Any], str]) -> bool:
+        action_str = self._extract_action_string(action)
+        alignment_score = sum(rule(action_str) for rule in self.alignment_rules)
+        is_aligned = alignment_score == len(self.alignment_rules)
+        return is_aligned
 
-    def _check_principle_alignment(self, action: Dict[str, Any], principle: EthicalPrinciple) -> bool:
-        # Implement specific checks for each principle
-        if principle.name == "Beneficence":
-            return self._check_beneficence(action)
-        elif principle.name == "Non-maleficence":
-            return self._check_non_maleficence(action)
-        # Add more checks for other principles
-        return True  # Default to True if no specific check is implemented
+    def _extract_action_string(self, action: Union[Dict[str, Any], str]) -> str:
+        if isinstance(action, dict):
+            return str(action.get('name', action.get('status', str(action))))
+        return str(action)
 
-    def _check_beneficence(self, action: Dict[str, Any]) -> bool:
-        # Implement logic to check if the action is beneficial
-        # This is a placeholder implementation
-        return "benefit" in action.get("tags", [])
+    def add_alignment_rule(self, rule):
+        if callable(rule):
+            self.alignment_rules.append(rule)
+        else:
+            raise TypeError("Alignment rule must be a callable")
 
-    def _check_non_maleficence(self, action: Dict[str, Any]) -> bool:
-        # Implement logic to check if the action avoids harm
-        # This is a placeholder implementation
-        return "harmful" not in action.get("tags", [])
+    def remove_alignment_rule(self, index):
+        if 0 <= index < len(self.alignment_rules):
+            return self.alignment_rules.pop(index)
+        else:
+            raise IndexError("Rule index out of range")
 
-    def report_alignment_issues(self, action: Dict[str, Any]) -> List[str]:
-        issues = []
-        for principle in self.ethical_principles:
-            if not self._check_principle_alignment(action, principle):
-                issues.append(f"Violation of {principle.name}: {principle.description}")
-        return issues
+    def get_alignment_rules(self):
+        return self.alignment_rules
 
 # Usage example
 if __name__ == "__main__":

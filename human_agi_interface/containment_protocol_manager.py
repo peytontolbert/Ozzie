@@ -1,6 +1,5 @@
 import logging
 from enum import Enum
-from typing import Dict, Any, Callable
 
 logger = logging.getLogger(__name__)
 
@@ -13,45 +12,54 @@ class ContainmentLevel(Enum):
 class ContainmentProtocolManager:
     def __init__(self):
         self.current_level = ContainmentLevel.LOW
-        self.protocols: Dict[ContainmentLevel, Callable] = {
-            ContainmentLevel.LOW: self._low_protocol,
-            ContainmentLevel.MEDIUM: self._medium_protocol,
-            ContainmentLevel.HIGH: self._high_protocol,
-            ContainmentLevel.CRITICAL: self._critical_protocol
+        self.protocols = {
+            ContainmentLevel.LOW: self._low_containment,
+            ContainmentLevel.MEDIUM: self._medium_containment,
+            ContainmentLevel.HIGH: self._high_containment,
+            ContainmentLevel.CRITICAL: self._critical_containment
         }
 
     def activate_protocol(self, level: ContainmentLevel):
+        if level not in ContainmentLevel:
+            raise ValueError(f"Invalid containment level: {level}")
+        
         self.current_level = level
         self.protocols[level]()
         logger.info(f"Containment protocol activated: {level.name}")
 
-    def deactivate_protocol(self):
-        previous_level = self.current_level
-        self.current_level = ContainmentLevel.LOW
-        logger.info(f"Containment protocol deactivated from {previous_level.name}")
+    def get_current_level(self):
+        return self.current_level
 
-    def _low_protocol(self):
-        # Implement low-level containment measures
-        logger.info("Activating low-level containment measures")
+    def _low_containment(self):
+        # Implement low containment measures
+        logger.info("Low containment measures activated")
+        # Example: Enable basic monitoring and logging
 
-    def _medium_protocol(self):
-        # Implement medium-level containment measures
-        logger.info("Activating medium-level containment measures")
+    def _medium_containment(self):
+        # Implement medium containment measures
+        logger.info("Medium containment measures activated")
+        # Example: Restrict certain API access, increase monitoring
 
-    def _high_protocol(self):
-        # Implement high-level containment measures
-        logger.info("Activating high-level containment measures")
+    def _high_containment(self):
+        # Implement high containment measures
+        logger.info("High containment measures activated")
+        # Example: Disable external network access, activate sandboxing
 
-    def _critical_protocol(self):
-        # Implement critical-level containment measures
-        logger.info("Activating critical-level containment measures")
+    def _critical_containment(self):
+        # Implement critical containment measures
+        logger.info("Critical containment measures activated")
+        # Example: Shut down all non-essential systems, isolate the AGI
 
-    def log_activity(self, activity: Dict[str, Any]):
-        logger.info(f"Activity logged: {activity} at containment level {self.current_level.name}")
+    def verify_containment_integrity(self):
+        # Implement logic to verify the integrity of the current containment level
+        logger.info(f"Verifying containment integrity for level: {self.current_level.name}")
+        # Example: Check if all containment measures for the current level are active and functioning
+        return True  # Replace with actual verification logic
 
 # Usage example
 if __name__ == "__main__":
-    manager = ContainmentProtocolManager()
-    manager.activate_protocol(ContainmentLevel.MEDIUM)
-    manager.log_activity({"action": "test_action", "result": "success"})
-    manager.deactivate_protocol()
+    containment_manager = ContainmentProtocolManager()
+    containment_manager.activate_protocol(ContainmentLevel.MEDIUM)
+    print(f"Current containment level: {containment_manager.get_current_level().name}")
+    integrity_check = containment_manager.verify_containment_integrity()
+    print(f"Containment integrity: {'Verified' if integrity_check else 'Compromised'}")

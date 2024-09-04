@@ -1,17 +1,37 @@
 from utils.logger import Logger
 from utils.error_handler import ErrorHandler
 from typing import Dict, Any
+import json
+
 class ExplanationGenerator:
     def __init__(self):
         self.explanation_levels = ["simple", "detailed", "technical"]
         self.logger = Logger("ExplanationGenerator")
         self.error_handler = ErrorHandler()
 
-    def generate(self, result: Dict[str, Any], impact: Dict[str, float], is_aligned: bool) -> str:
-        explanation = f"Action result: {self._format_result(result)}\n"
-        explanation += f"Impact: {impact}\n"
-        explanation += f"Alignment: {'Aligned' if is_aligned else 'Not aligned'}\n"
-        return explanation
+    def generate(self, result, impact, is_aligned):
+        explanation = {
+            "action_result": {
+                "status": result["status"],
+                "output": [self._format_output(item) for item in result["output"]],
+                "errors": result["errors"],
+                "start_time": result["start_time"],
+                "end_time": result["end_time"],
+                "estimated_runtime": result["estimated_runtime"]
+            },
+            "impact": impact,
+            "alignment": "Aligned" if is_aligned else "Not aligned"
+        }
+        return json.dumps(explanation, indent=2)
+
+    def _format_output(self, output_item):
+        return {
+            "name": str(output_item["name"]),
+            "status": output_item["status"],
+            "output": output_item["output"],
+            "start_time": output_item["start_time"],
+            "end_time": output_item["end_time"]
+        }
 
     def generate_multilevel_explanation(self, result, impact, is_aligned):
         explanations = {}

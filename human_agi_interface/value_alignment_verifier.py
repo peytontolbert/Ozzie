@@ -17,12 +17,12 @@ class ValueAlignmentVerifier:
         ]
 
     def verify_alignment(self, action: Union[Dict[str, Any], str]) -> bool:
-        action_str = self._extract_action_string(action)
+        action_str = self._get_action_string(action)
         alignment_score = sum(rule(action_str) for rule in self.alignment_rules)
         is_aligned = alignment_score == len(self.alignment_rules)
         return is_aligned
 
-    def _extract_action_string(self, action: Union[Dict[str, Any], str]) -> str:
+    def _get_action_string(self, action: Union[Dict[str, Any], str]) -> str:
         if isinstance(action, dict):
             return str(action.get('name', action.get('status', str(action))))
         return str(action)

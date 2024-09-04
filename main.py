@@ -15,14 +15,20 @@ from workflows.workflow_engine import WorkflowEngine
 from autonomous_loop import AutonomousLoop
 import asyncio
 from virtual_environment import VirtualEnvironment
+from web_ui import api_endpoints
+from experience_engine import ExperienceEngine
 
 app = FastAPI()
 
 app.mount("/api", api_app)
 app.mount("/ws", ws_app)
 
+app.include_router(api_endpoints.router)
+
 @app.on_event("startup")
 async def startup_event():
+    global feedback_integrator
+    feedback_integrator = FeedbackIntegrator(state_size=10, action_size=5)  # Provide values if needed
     await data_aggregator.connect()
     await event_publisher.start()
     # Initialize AGI components
@@ -30,7 +36,6 @@ async def startup_event():
     containment_protocol_manager = ContainmentProtocolManager()
     alignment_decision_simulator = AlignmentDecisionSimulator()
     long_term_impact_analyzer = LongTermImpactAnalyzer()
-    feedback_integrator = FeedbackIntegrator()
     explanation_generator = ExplanationGenerator()
     intent_interpreter = IntentInterpreter()
     workflow_engine = WorkflowEngine()
@@ -40,6 +45,10 @@ async def startup_event():
         explanation_generator=explanation_generator,
         feedback_integrator=feedback_integrator
     )
+
+    experience_engine = ExperienceEngine()
+    if hasattr(experience_engine, 'initialize'):
+        experience_engine.initialize()
 
     # Add these components to a global state or dependency injection system
     app.state.agi_components = {
@@ -51,11 +60,12 @@ async def startup_event():
         "explanation_generator": explanation_generator,
         "augmented_intelligence_interface": augmented_intelligence_interface,
         "intent_interpreter": intent_interpreter,
-        "workflow_optimizer": workflow_optimizer
+        "workflow_optimizer": workflow_optimizer,
+        "experience_engine": experience_engine
     }
 
-    # Initialize VirtualEnvironment
-    ve = VirtualEnvironment()
+    # Initialize VirtualEnvironment with experience_engine
+    ve = VirtualEnvironment(experience_engine)
     ve.initialize()
 
     # Start the autonomous loop

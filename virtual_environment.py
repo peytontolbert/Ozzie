@@ -1,13 +1,17 @@
 from agent_manager import AgentManager
 from experience_engine import ExperienceEngine
 from main_menu import MainMenu
+from utils.logger import Logger  # Add this import
+import asyncio
 
 class VirtualEnvironment:
-    def __init__(self):
+    def __init__(self, experience_engine):
+        self.experience_engine = experience_engine
         self.main_menu = MainMenu()
         self.agent_manager = AgentManager()
-        self.experience_engine = ExperienceEngine()
         self.current_agent = None
+        self.event_queue = asyncio.Queue()
+        self.logger = Logger("VirtualEnvironment")
 
     def initialize(self):
         self.main_menu.initialize()
@@ -48,6 +52,19 @@ class VirtualEnvironment:
         print(f"Outcome: {outcome}")
         self.current_agent.learn({"scenario": scenario, "action": action, "outcome": outcome})
 
+    async def publish_event(self, event):
+        await self.event_queue.put(event)
+        self.logger.info(f"Event published: {event}")
+
+    async def process_events(self):
+        while True:
+            event = await self.event_queue.get()
+            # Process the event (you can implement the logic here)
+            self.logger.info(f"Processing event: {event}")
+            # Simulate event processing
+            await asyncio.sleep(0.1)
+            self.event_queue.task_done()
+
     async def process_cycle(self, result, explanation):
         # Process the result of an autonomous cycle
         print(f"Processing cycle result: {result}")
@@ -61,6 +78,9 @@ class VirtualEnvironment:
         if self.current_agent:
             self.current_agent.learn({"result": result, "explanation": explanation})
         # Update the experience engine with the latest scenario, action, and outcome
-        self.experience_engine.last_scenario = result.get('scenario')
-        self.experience_engine.last_action = result.get('action')
-        self.experience_engine.last_outcome = result.get('outcome')
+        if hasattr(self.experience_engine, 'last_scenario'):
+            self.experience_engine.last_scenario = result.get('scenario')
+        if hasattr(self.experience_engine, 'last_action'):
+            self.experience_engine.last_action = result.get('action')
+        if hasattr(self.experience_engine, 'last_outcome'):
+            self.experience_engine.last_outcome = result.get('outcome')

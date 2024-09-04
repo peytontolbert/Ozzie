@@ -132,3 +132,29 @@ async def get_updates(current_user: User = Depends(get_current_user)):
     except Exception as e:
         error_handler.handle_error(e, "Error getting updates")
         raise HTTPException(status_code=500, detail="Internal server error")
+
+# Add this new endpoint
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+from typing import List, Dict, Any
+
+router = APIRouter()
+
+class AutonomousLoopStatus(BaseModel):
+    status: str
+    current_workflow: str
+    last_result: Dict[str, Any]
+
+@router.get("/api/autonomous-loop/status", response_model=AutonomousLoopStatus)
+async def get_autonomous_loop_status():
+    # This is a placeholder. You'll need to implement a way to get the actual status from your AutonomousLoop instance.
+    return AutonomousLoopStatus(
+        status="running",
+        current_workflow="Example Workflow",
+        last_result={"status": "completed", "output": "Example output"}
+    )
+
+@router.get("/api/workflows", response_model=List[str])
+async def get_workflows():
+    # This is a placeholder. You'll need to implement a way to get the actual list of workflows from your WorkflowEngine.
+    return ["Workflow 1", "Workflow 2", "Workflow 3"]

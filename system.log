@@ -116,3 +116,858 @@
 2024-09-04 02:32:45,008 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'the user', 'object': 'a trip', 'entities': [{'name': 'destination', 'value': 'Hawaii'}], 'sentiment': 'positive'}
 2024-09-04 02:32:45,013 - AutonomousLoop - INFO - Attempting error recovery...
 2024-09-04 02:32:45,013 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:34:24,642 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:34:27,374 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask a question', 'subject': 'unknown', 'object': 'unknown', 'entities': [], 'sentiment': None}
+2024-09-04 02:35:30,005 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'hotel', 'entities': ['location', 'date'], 'sentiment': 'neutral'}
+2024-09-04 02:36:32,924 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommendation', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'Italian cuisine', 'type': 'cuisine'}], 'sentiment': 'neutral'}
+2024-09-04 02:37:35,701 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'book', 'object': None, 'entities': [{'name': 'book', 'type': 'product'}], 'sentiment': 'neutral'}
+2024-09-04 02:38:38,624 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'Italian cuisine', 'type': 'food'}], 'sentiment': 'neutral'}
+2024-09-04 02:39:41,414 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggestion', 'subject': 'improving health', 'object': 'eating habits', 'entities': ['healthy food', 'exercise'], 'sentiment': 'positive'}
+2024-09-04 02:40:44,261 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request information', 'subject': 'movie recommendations', 'object': None, 'entities': [{'name': "user's taste", 'type': 'personal preference'}], 'sentiment': 'neutral'}
+2024-09-04 02:42:32,149 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 02:42:35,294 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I have a meeting with John tomorrow at 10 AM.', 'action': 'schedule', 'subject': 'meeting', 'object': 'John', 'entities': [{'name': 'person', 'value': 'John'}, {'name': 'time', 'value': '10 AM'}], 'sentiment': 'neutral'}
+2024-09-04 02:42:35,294 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 02:42:40,302 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 02:43:43,377 - IntentInterpreter - INFO - Interpreted intent: {'input': 'What is the best restaurant to eat sushi in Tokyo?', 'action': 'search for a restaurant', 'subject': 'sushi', 'object': 'Tokyo', 'entities': {'cuisine_type': 'sushi', 'location': 'Tokyo'}, 'sentiment': 'neutral'}
+2024-09-04 02:43:43,378 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:01:35,695 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:01:35,696 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:01:35.696006'}
+2024-09-04 09:01:50,410 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'information', 'object': 'appointment', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:01'}], 'sentiment': 'neutral'}
+2024-09-04 09:01:50,412 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:01:55,414 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:02:55,423 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:02:55.423356'}
+2024-09-04 09:02:58,474 - IntentInterpreter - INFO - Interpreted intent: {'action': 'make a reservation', 'subject': 'restaurant', 'object': 'table', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:02:55'}], 'sentiment': 'neutral'}
+2024-09-04 09:02:58,475 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:03:03,495 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:04:03,490 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:04:03.490922'}
+2024-09-04 09:04:06,293 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'appointment', 'object': "doctor's office", 'entities': ["doctor's office", 'date'], 'sentiment': 'neutral'}
+2024-09-04 09:04:06,294 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:04:11,289 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:05:11,288 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:05:11.288913'}
+2024-09-04 09:05:14,409 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie information', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:05:11.288913'}], 'sentiment': 'neutral'}
+2024-09-04 09:05:14,410 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:05:19,428 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:06:19,435 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:06:19.435592'}
+2024-09-04 09:06:22,557 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'upcoming event', 'object': 'specific details about the event', 'entities': [{'name': 'event', 'type': 'upcoming'}, {'name': 'date', 'type': 'specific'}], 'sentiment': 'neutral'}
+2024-09-04 09:06:22,558 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:06:27,559 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:07:27,562 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:07:27.562209'}
+2024-09-04 09:07:30,434 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I would like to book a flight from New York City to Los Angeles for next Friday using my American Express card.', 'action': 'book', 'subject': 'flight', 'object': 'New York City, Los Angeles, next Friday', 'entities': ['American Express'], 'sentiment': 'positive'}
+2024-09-04 09:07:30,435 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:07:35,432 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:08:35,428 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:08:35.428481'}
+2024-09-04 09:08:38,715 - IntentInterpreter - INFO - Interpreted intent: {'action': 'share', 'subject': 'a recipe for chocolate chip cookies', 'object': None, 'entities': [{'name': 'recipe', 'value': 'chocolate chip cookies'}, {'name': 'date', 'value': '2024-09-04T09:08:35.428481'}], 'sentiment': 'positive'}
+2024-09-04 09:08:38,717 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:08:43,710 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:09:43,712 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:09:43.712777'}
+2024-09-04 09:09:46,619 - IntentInterpreter - INFO - Interpreted intent: {'input': "The user wants to know if the movie 'Inception' is available on Netflix.", 'action': 'movie_availability', 'subject': 'user', 'object': "movie 'Inception'", 'entities': [{'name': 'Netflix', 'type': 'streaming_service'}], 'sentiment': 'neutral'}
+2024-09-04 09:09:46,620 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:09:51,636 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:10:51,654 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:10:51.654356'}
+2024-09-04 09:10:54,706 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I am looking for a hotel in New York City with a rooftop pool and good views.', 'action': 'search for accommodations', 'subject': 'hotel', 'object': 'rooftop pool and good views', 'entities': [{'name': 'New York City', 'type': 'location'}], 'sentiment': 'neutral'}
+2024-09-04 09:10:54,707 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:10:59,729 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:20:23,307 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:20:23,309 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:20:23.309311'}
+2024-09-04 09:20:27,835 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'meeting room reservation', 'object': 'meeting room', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:20'}], 'sentiment': 'neutral'}
+2024-09-04 09:20:27,835 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:20:32,846 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:21:32,867 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:21:32.867577'}
+2024-09-04 09:21:35,915 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'travel plans', 'object': None, 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'date', 'value': '2024-09-04T09:21:32.867577'}], 'sentiment': 'positive'}
+2024-09-04 09:21:35,915 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:21:40,933 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:22:31,800 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:22:31,800 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:22:31.800270'}
+2024-09-04 09:22:34,655 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': None, 'object': 'restaurant', 'entities': [{'name': 'location', 'value': 'nearby'}], 'sentiment': 'neutral'}
+2024-09-04 09:22:34,655 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:22:39,663 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:23:23,311 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:23:23,312 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:23:23.312270'}
+2024-09-04 09:23:26,165 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a room', 'subject': 'user', 'object': 'room', 'entities': ['hotel', 'check-in date', 'checkout date'], 'sentiment': 'neutral'}
+2024-09-04 09:23:26,166 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:23:31,163 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:24:31,161 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:24:31.161913'}
+2024-09-04 09:24:34,291 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'book', 'object': 'hotel', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:24:31.161913'}], 'sentiment': 'neutral'}
+2024-09-04 09:24:34,292 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:24:43,954 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:24:43,955 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:24:43.955781'}
+2024-09-04 09:24:47,068 - IntentInterpreter - INFO - Interpreted intent: {'action': 'requesting information', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:24:43'}], 'sentiment': 'neutral'}
+2024-09-04 09:24:47,069 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:24:52,090 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:25:41,976 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:25:41,977 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:25:41.977594'}
+2024-09-04 09:25:44,704 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book appointment', 'subject': 'user', 'object': 'appointment', 'entities': ['doctor', 'date', 'time'], 'sentiment': 'neutral'}
+2024-09-04 09:25:44,704 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:25:49,703 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:26:49,718 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:26:49.718728'}
+2024-09-04 09:26:52,473 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'hotel room', 'entities': ['location', 'date'], 'sentiment': 'neutral'}
+2024-09-04 09:26:52,473 - AutonomousLoop - ERROR - Failed to generate workflow: string indices must be integers
+2024-09-04 09:26:52,473 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:26:52.473868'}
+2024-09-04 09:26:55,525 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'Hawaii'}, {'name': 'departure date', 'value': '2024-09-04T09:26:52.473868'}], 'sentiment': 'positive'}
+2024-09-04 09:26:55,526 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:27:00,518 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 09:28:02,581 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:28:02,581 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:02.581597'}
+2024-09-04 09:28:05,571 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:28:02.581597'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:05,571 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:05,571 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:05.571850'}
+2024-09-04 09:28:08,137 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'user', 'object': 'product', 'entities': ['product', 'amount'], 'sentiment': 'neutral'}
+2024-09-04 09:28:08,137 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:08,137 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:08.137570'}
+2024-09-04 09:28:10,916 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I have to cancel my flight to London because of a personal emergency.', 'action': 'cancel', 'subject': 'flight', 'object': 'London', 'entities': {'reason': 'personal emergency'}, 'sentiment': 'negative'}
+2024-09-04 09:28:10,916 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:10,916 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:10.916665'}
+2024-09-04 09:28:13,567 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask_question', 'subject': 'future event', 'object': None, 'entities': ['2024-09-04T09:28:10.916665'], 'sentiment': 'neutral'}
+2024-09-04 09:28:13,567 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:13,567 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:13.567703'}
+2024-09-04 09:28:16,271 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggestion', 'subject': 'diet plan', 'object': None, 'entities': [{'name': 'keto diet', 'type': 'food'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:16,271 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:16,272 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:16.272097'}
+2024-09-04 09:28:19,024 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'upcoming event', 'object': 'concert', 'entities': {'time': '2024-09-04T09:28:16.272097', 'type': 'event'}, 'sentiment': 'neutral'}
+2024-09-04 09:28:19,024 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:19,024 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:19.024981'}
+2024-09-04 09:28:21,843 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The customer complained about the slow service at the restaurant.', 'action': 'complain', 'subject': 'customer', 'object': 'slow service', 'entities': {'location': 'restaurant'}, 'sentiment': 'negative'}
+2024-09-04 09:28:21,843 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:21,844 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:21.844030'}
+2024-09-04 09:28:24,619 - IntentInterpreter - INFO - Interpreted intent: {'action': 'share', 'subject': 'movie recommendations', 'object': None, 'entities': [{'name': 'user', 'value': 'you'}, {'name': 'movie genres', 'value': 'drama, comedy'}], 'sentiment': 'positive'}
+2024-09-04 09:28:24,619 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:24,619 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:24.619762'}
+2024-09-04 09:28:27,576 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I need a haircut because my hair is very long.', 'action': 'request', 'subject': 'haircut', 'object': None, 'entities': [{'name': 'hair', 'type': 'physical feature'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:27,576 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:27,577 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:27.577026'}
+2024-09-04 09:28:30,410 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'Hawaii'}, {'name': 'departure_date', 'value': '2024-07-01'}], 'sentiment': 'positive'}
+2024-09-04 09:28:30,410 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:30,410 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:30.410572'}
+2024-09-04 09:28:33,235 - IntentInterpreter - INFO - Interpreted intent: {'input': 'John wants to buy a new smartphone. He is looking for a Samsung Galaxy S22.', 'action': 'buy', 'subject': 'John', 'object': 'smartphone', 'entities': {'phone_model': 'Samsung Galaxy S22'}, 'sentiment': 'positive'}
+2024-09-04 09:28:33,236 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:33,236 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:33.236988'}
+2024-09-04 09:28:36,000 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'movie recommendation', 'object': None, 'entities': [{'name': 'genre', 'value': 'action'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:36,000 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:36,000 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:36.000722'}
+2024-09-04 09:28:38,878 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:28:36'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:38,878 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:38,879 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:38.879286'}
+2024-09-04 09:28:42,385 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The quick brown fox jumps over the lazy dog.', 'action': 'Describe', 'subject': 'A scene', 'object': None, 'entities': [{'name': 'quick', 'type': 'adjective'}, {'name': 'brown', 'type': 'adjective'}, {'name': 'fox', 'type': 'noun'}, {'name': 'lazy', 'type': 'adjective'}, {'name': 'dog', 'type': 'noun'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:42,385 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:42,386 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:42.386019'}
+2024-09-04 09:28:45,173 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'broken chair', 'object': None, 'entities': [{'name': 'chair', 'type': 'furniture'}], 'sentiment': 'negative'}
+2024-09-04 09:28:45,173 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:45,173 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:45.173773'}
+2024-09-04 09:28:48,180 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:28:45.173773'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:48,181 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:48,181 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:48.181941'}
+2024-09-04 09:28:51,023 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'outdoor event', 'object': None, 'entities': [{'name': 'outdoor space', 'type': 'location'}, {'name': 'food trucks', 'type': 'service'}], 'sentiment': 'positive'}
+2024-09-04 09:28:51,023 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:51,024 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:51.024471'}
+2024-09-04 09:28:54,044 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend a restaurant', 'subject': 'user', 'object': 'restaurant', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:28:51.024471'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:54,044 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:54,044 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:54.044661'}
+2024-09-04 09:28:57,017 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:28:54'}], 'sentiment': 'neutral'}
+2024-09-04 09:28:57,017 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:28:57,018 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:28:57.018113'}
+2024-09-04 09:29:00,045 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'time', 'value': '2024-09-04T09:28:57.018113'}], 'sentiment': 'positive'}
+2024-09-04 09:29:00,046 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:00,047 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:00.047020'}
+2024-09-04 09:29:02,902 - IntentInterpreter - INFO - Interpreted intent: {'input': "I'm thinking about buying a new car, but I need to save up some money first.", 'action': 'buy', 'subject': 'new car', 'object': 'money', 'entities': ['vehicle type: new car'], 'sentiment': 'neutral'}
+2024-09-04 09:29:02,902 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:02,902 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:02.902892'}
+2024-09-04 09:29:05,823 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The company is planning to hold a gala event for its employees.', 'action': 'planning an event', 'subject': 'company', 'object': 'gala event, employees', 'entities': [{'name': 'company', 'type': 'organization'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:05,824 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:05,824 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:05.824772'}
+2024-09-04 09:29:08,693 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan event', 'subject': 'AI conference', 'object': 'registration', 'entities': {'event_date': '2024-09-04', 'event_time': '09:29:05'}, 'sentiment': 'neutral'}
+2024-09-04 09:29:08,693 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:08,693 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:08.693935'}
+2024-09-04 09:29:11,431 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book', 'subject': 'tickets', 'object': 'concert', 'entities': {'date': '2024-09-04', 'time': '09:29:08'}, 'sentiment': 'positive'}
+2024-09-04 09:29:11,432 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:11,432 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:11.432527'}
+2024-09-04 09:29:14,224 - IntentInterpreter - INFO - Interpreted intent: {'action': 'express_interest', 'subject': 'artificial intelligence development', 'object': None, 'entities': [{'name': 'AI', 'type': 'technology'}], 'sentiment': 'positive'}
+2024-09-04 09:29:14,225 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:14,225 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:14.225064'}
+2024-09-04 09:29:17,228 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a room', 'subject': 'user', 'object': 'room', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:29:14.225064'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:17,229 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:17,229 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:17.229103'}
+2024-09-04 09:29:19,883 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book flight', 'subject': 'user', 'object': 'flight ticket', 'entities': ['destination (city)', 'departure date'], 'sentiment': 'neutral'}
+2024-09-04 09:29:19,883 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:19,884 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:19.884416'}
+2024-09-04 09:29:22,843 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurants', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:29:19.884416'}], 'sentiment': None}
+2024-09-04 09:29:22,844 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:22,844 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:22.844237'}
+2024-09-04 09:29:25,857 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie tickets', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:29:22.844237'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:25,858 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:25,858 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:25.858004'}
+2024-09-04 09:29:28,596 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'name': 'poor customer service'}], 'sentiment': 'negative'}
+2024-09-04 09:29:28,597 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:28,597 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:28.597238'}
+2024-09-04 09:29:31,345 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'information', 'object': 'flight details', 'entities': {'date': '2024-09-04'}, 'sentiment': 'neutral'}
+2024-09-04 09:29:31,345 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:31,345 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:31.345786'}
+2024-09-04 09:29:34,111 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The young man went to the movie theater with his friends.', 'action': 'went', 'subject': 'young man', 'object': 'movie theater', 'entities': ['young man', 'friends', 'movie theater'], 'sentenceSentiment': 'positive', 'sentiment': None}
+2024-09-04 09:29:34,112 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:34,112 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:34.112804'}
+2024-09-04 09:29:36,863 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'restaurant', 'type': 'business'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:36,864 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:36,864 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:36.864253'}
+2024-09-04 09:29:39,500 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'delayed flight', 'object': None, 'entities': ['flight', 'delay'], 'sentiment': 'negative'}
+2024-09-04 09:29:39,501 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:39,501 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:39.501176'}
+2024-09-04 09:29:42,265 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'bus tickets', 'object': None, 'entities': [{'name': 'bus', 'type': 'transportation'}, {'name': 'tickets', 'type': 'travel document'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:42,266 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:42,266 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:42.266002'}
+2024-09-04 09:29:45,281 - IntentInterpreter - INFO - Interpreted intent: {'action': 'making a reservation', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:29:42'}], 'sentiment': None}
+2024-09-04 09:29:45,281 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:45,282 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:45.282267'}
+2024-09-04 09:29:47,924 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I am looking for a restaurant near me', 'action': 'search', 'subject': 'restaurant', 'object': 'near me', 'entities': ['location'], 'sentiment': 'neutral'}
+2024-09-04 09:29:47,925 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:47,925 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:47.925435'}
+2024-09-04 09:29:50,867 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'user', 'object': 'trip', 'entities': [{'name': 'destination', 'value': 'Italy'}, {'name': 'timeframe', 'value': 'summer of 2024'}], 'sentiment': 'positive'}
+2024-09-04 09:29:50,867 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:50,868 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:50.868496'}
+2024-09-04 09:29:53,870 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:29:50.868496'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:53,870 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:53,871 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:53.871181'}
+2024-09-04 09:29:56,629 - IntentInterpreter - INFO - Interpreted intent: {'input': "The president's speech was inspiring and touched many hearts.", 'action': 'speech', 'subject': 'president', 'object': 'hearts', 'entities': ['president', 'speech'], 'sentiment': 'positive'}
+2024-09-04 09:29:56,629 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:56,630 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:56.630462'}
+2024-09-04 09:29:59,768 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking a question', 'subject': 'upcoming event', 'object': 'date', 'entities': [{'name': 'event', 'value': 'upcoming event'}, {'name': 'time', 'value': '2024-09-04T09:29:56.630462'}], 'sentiment': 'neutral'}
+2024-09-04 09:29:59,768 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:29:59,768 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:29:59.768698'}
+2024-09-04 09:30:02,758 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book', 'subject': 'user', 'object': 'concert tickets', 'entities': [{'name': 'artist', 'value': 'Coldplay'}, {'name': 'date', 'value': '2024-09-04T19:30:00.000000'}], 'sentiment': 'positive'}
+2024-09-04 09:30:02,758 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:02,758 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:02.758730'}
+2024-09-04 09:30:05,849 - IntentInterpreter - INFO - Interpreted intent: {'action': 'planning', 'subject': 'an event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:30:02.758730'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:05,849 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:05,849 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:05.849805'}
+2024-09-04 09:30:08,592 - IntentInterpreter - INFO - Interpreted intent: {'action': 'offer advice', 'subject': 'investment strategy', 'object': None, 'entities': [{'name': 'investment strategy', 'type': 'financial'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:08,592 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:08,592 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:08.592626'}
+2024-09-04 09:30:11,412 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'flight', 'entities': {'date': '2024-09-04T09:30:08.592626', 'destination': 'Paris'}, 'sentiment': 'neutral'}
+2024-09-04 09:30:11,412 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:11,412 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:11.412777'}
+2024-09-04 09:30:14,234 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie tickets', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:30:11'}], 'sentiment': None}
+2024-09-04 09:30:14,234 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:14,234 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:14.234822'}
+2024-09-04 09:30:16,973 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': None, 'object': 'trip', 'entities': [{'name': 'destination', 'value': None}], 'sentiment': 'neutral'}
+2024-09-04 09:30:16,973 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:16,974 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:16.974022'}
+2024-09-04 09:30:19,863 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurant', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:30:16.974022'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:19,864 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:19,864 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:19.864458'}
+2024-09-04 09:30:22,394 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor service', 'object': 'restaurant', 'entities': ['restaurant'], 'sentiment': 'negative'}
+2024-09-04 09:30:22,394 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:22,395 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:22.395175'}
+2024-09-04 09:30:25,522 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The company is launching a new product line that includes eco-friendly features.', 'action': 'launch', 'subject': 'company', 'object': 'new product line with eco-friendly features', 'entities': [{'name': 'company', 'type': 'Organization'}, {'name': 'product line', 'type': 'Product'}], 'sentiment': 'positive'}
+2024-09-04 09:30:25,522 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:25,522 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:25.522690'}
+2024-09-04 09:30:28,199 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'Spain'}], 'sentiment': 'positive'}
+2024-09-04 09:30:28,199 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:28,199 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:28.199542'}
+2024-09-04 09:30:31,197 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'restaurant information', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:30:28.199542'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:31,197 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:31,197 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:31.197781'}
+2024-09-04 09:30:33,934 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'name': 'customer service'}], 'sentiment': 'negative'}
+2024-09-04 09:30:33,934 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:33,934 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:33.934839'}
+2024-09-04 09:30:36,596 - IntentInterpreter - INFO - Interpreted intent: {'input': 'Buy me a new smartphone from Apple store online.', 'action': 'buy', 'subject': 'smartphone', 'object': 'Apple store online', 'entities': ['Apple', 'store'], 'sentiment': 'positive'}
+2024-09-04 09:30:36,596 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:36,596 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:36.596948'}
+2024-09-04 09:30:39,582 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'long waiting time', 'object': 'restaurant service', 'entities': [{'name': 'waiting time', 'type': 'time'}, {'name': 'restaurant', 'type': 'business'}], 'sentiment': 'negative'}
+2024-09-04 09:30:39,582 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:39,582 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:39.582633'}
+2024-09-04 09:30:42,567 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:30:39'}], 'sentiment': 'negative'}
+2024-09-04 09:30:42,567 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:42,567 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:42.567840'}
+2024-09-04 09:30:45,535 - IntentInterpreter - INFO - Interpreted intent: {'action': 'scheduling', 'subject': 'meeting', 'object': 'at 2024-09-04T09:30:42.567840', 'entities': {'date': '2024-09-04', 'time': '09:30:42.567840'}, 'sentiment': 'neutral'}
+2024-09-04 09:30:45,535 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:45,536 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:45.536462'}
+2024-09-04 09:30:48,423 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a room', 'subject': 'user', 'object': 'room', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:30'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:48,423 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:48,423 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:48.423993'}
+2024-09-04 09:30:51,225 - IntentInterpreter - INFO - Interpreted intent: {'input': "I'm going to buy a new phone tomorrow. I want an iPhone but the price is too high.", 'action': 'buy', 'subject': 'phone', 'object': 'iPhone', 'entities': {'price': 'too high'}, 'sentiment': 'negative'}
+2024-09-04 09:30:51,225 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:51,226 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:51.226103'}
+2024-09-04 09:30:54,191 - IntentInterpreter - INFO - Interpreted intent: {'action': 'query', 'subject': 'upcoming events', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:30:51.226103'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:54,191 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:54,191 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:54.191580'}
+2024-09-04 09:30:57,369 - IntentInterpreter - INFO - Interpreted intent: {'input': "The weather is quite warm today, but I don't mind too much as long as it doesn't rain.", 'action': 'express personal opinion about the weather', 'subject': 'weather conditions', 'object': None, 'entities': [{'name': 'temperature', 'value': 'warm'}, {'name': 'precipitation', 'value': 'rain'}], 'sentiment': 'neutral'}
+2024-09-04 09:30:57,369 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:30:57,370 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:30:57.370193'}
+2024-09-04 09:31:00,414 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'user', 'object': 'a trip', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:30:57.370193'}], 'sentiment': 'positive'}
+2024-09-04 09:31:00,414 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:00,415 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:00.415228'}
+2024-09-04 09:31:03,473 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan trip', 'subject': 'user', 'object': 'trip', 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'departure_date', 'value': '2024-09-04T09:31:00.415228'}], 'sentiment': 'positive'}
+2024-09-04 09:31:03,474 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:03,474 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:03.474237'}
+2024-09-04 09:31:06,359 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommendation', 'subject': 'movie', 'object': None, 'entities': [{'entity': 'film critic', 'type': 'person'}, {'entity': 'TomatoMeter', 'type': 'website'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:06,359 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:06,359 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:06.359559'}
+2024-09-04 09:31:09,314 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'meeting', 'object': None, 'entities': [{'entity': 'date', 'value': '2024-09-04'}, {'entity': 'time', 'value': '09:31'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:09,314 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:09,314 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:09.314751'}
+2024-09-04 09:31:11,920 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'flight tickets', 'entities': ['flight tickets', 'destination', 'date'], 'sentiment': 'neutral'}
+2024-09-04 09:31:11,920 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:11,920 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:11.920732'}
+2024-09-04 09:31:14,871 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'booking', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:31:11.920732'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:14,871 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:14,871 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:14.871612'}
+2024-09-04 09:31:17,806 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to go on a vacation with my family.', 'action': 'planning_a_vacation', 'subject': 'vacation', 'object': 'family', 'entities': [{'type': 'date', 'value': '2024-09-04'}], 'sentiment': 'positive'}
+2024-09-04 09:31:17,806 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:17,807 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:17.807349'}
+2024-09-04 09:31:20,543 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for restaurant recommendation', 'subject': 'restaurant', 'object': 'recommendation', 'entities': {'date': '2024-09-04'}, 'sentiment': 'neutral'}
+2024-09-04 09:31:20,543 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:20,543 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:20.543905'}
+2024-09-04 09:31:23,494 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a hotel', 'subject': 'user', 'object': 'hotel room', 'entities': [{'name': 'check-in date', 'value': '2024-09-04'}, {'name': 'check-out date', 'value': '2024-09-07'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:23,494 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:23,495 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:23.495277'}
+2024-09-04 09:31:26,428 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'schedule meeting', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:31:23.495277'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:26,429 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:26,429 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:26.429151'}
+2024-09-04 09:31:29,187 - IntentInterpreter - INFO - Interpreted intent: {'action': 'making reservation', 'subject': 'user', 'object': 'table', 'entities': {'date': '2024-09-04', 'time': '17:30'}, 'sentiment': 'neutral'}
+2024-09-04 09:31:29,187 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:29,188 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:29.188255'}
+2024-09-04 09:31:32,193 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'hotel booking', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:31:29.188255'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:32,194 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:32,194 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:32.194587'}
+2024-09-04 09:31:35,172 - IntentInterpreter - INFO - Interpreted intent: {'input': "John wants to buy a new smartphone for his sister's birthday.", 'output': {'action': 'buy', 'subject': 'John', 'object': 'a new smartphone', 'entities': [{'name': "sister's birthday", 'type': 'event'}], 'sentiment': 'positive'}, 'action': None, 'subject': None, 'object': None, 'entities': None, 'sentiment': None}
+2024-09-04 09:31:35,172 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:35,172 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:35.172723'}
+2024-09-04 09:31:38,037 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04T09:31:35.172723'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:38,037 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:38,038 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:38.038444'}
+2024-09-04 09:31:40,935 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggesting', 'subject': 'restaurant menu items', 'object': None, 'entities': [{'name': 'restaurant', 'type': 'business'}, {'name': 'menu items', 'type': 'food'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:40,935 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:40,935 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:40.935654'}
+2024-09-04 09:31:43,499 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': 'recommendations', 'entities': ['Italian cuisine', 'price range'], 'sentiment': 'neutral'}
+2024-09-04 09:31:43,499 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:43,499 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:43.499780'}
+2024-09-04 09:31:46,534 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to buy a new laptop with an i7 processor, 16GB RAM, and a 512GB SSD.', 'intentAction': 'buy', 'subject': 'laptop', 'object': 'i7 processor, 16GB RAM, 512GB SSD', 'entities': {'processor': 'i7', 'RAM': '16GB', 'storage': '512GB SSD'}, 'sentiment': 'positive', 'action': None}
+2024-09-04 09:31:46,534 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:46,534 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:46.534593'}
+2024-09-04 09:31:49,581 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a ticket', 'subject': 'user', 'object': 'ticket', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:31:46.534593'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:49,581 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:49,581 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:49.581756'}
+2024-09-04 09:31:52,570 - IntentInterpreter - INFO - Interpreted intent: {'action': 'expressing_opinion', 'subject': 'government policy on climate change', 'object': None, 'entities': [{'type': 'political_entity', 'value': 'government'}, {'type': 'environmental_issue', 'value': 'climate change'}], 'sentiment': 'neutral'}
+2024-09-04 09:31:52,570 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:52,571 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:52.571320'}
+2024-09-04 09:31:55,630 - IntentInterpreter - INFO - Interpreted intent: {'action': 'planning a trip', 'subject': 'the user', 'object': 'a vacation', 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'departure date', 'value': 'July 1st, 2024'}], 'sentiment': 'excited'}
+2024-09-04 09:31:55,630 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:55,630 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:55.630958'}
+2024-09-04 09:31:58,516 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'user', 'object': 'car', 'entities': [{'name': 'make', 'value': 'Tesla'}, {'name': 'model', 'value': 'Model S'}], 'sentiment': 'positive'}
+2024-09-04 09:31:58,516 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:31:58,517 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:31:58.517015'}
+2024-09-04 09:32:01,514 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'meeting request', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:31:58'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:01,514 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:01,514 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:01.514893'}
+2024-09-04 09:32:04,325 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking', 'subject': 'upcoming event', 'object': '', 'entities': [{'type': 'date', 'value': '2024-09-04'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:04,326 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:04,326 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:04.326464'}
+2024-09-04 09:32:07,387 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book', 'subject': 'conference ticket', 'object': 'for myself', 'entities': [{'name': 'event', 'value': 'Tech Conference'}, {'name': 'date', 'value': '2024-09-04'}], 'sentiment': 'positive'}
+2024-09-04 09:32:07,387 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:07,387 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:07.387763'}
+2024-09-04 09:32:10,076 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest a movie', 'subject': None, 'object': None, 'entities': [{'name': 'movie'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:10,076 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:10,077 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:10.077011'}
+2024-09-04 09:32:12,806 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': 'the store', 'entities': [{'name': 'store', 'type': 'business'}], 'sentiment': 'negative'}
+2024-09-04 09:32:12,807 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:12,807 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:12.807151'}
+2024-09-04 09:32:15,817 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan trip', 'subject': 'user', 'object': 'trip planning', 'entities': [{'name': 'destination', 'value': 'Italy'}, {'name': 'date', 'value': '2024-09-04T09:32:12.807151'}], 'sentiment': 'positive'}
+2024-09-04 09:32:15,817 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:15,818 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:15.818270'}
+2024-09-04 09:32:18,531 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'trip to Hawaii', 'object': '', 'entities': [{'name': 'Hawaii', 'type': 'location'}], 'sentiment': 'positive'}
+2024-09-04 09:32:18,532 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:18,532 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:18.532520'}
+2024-09-04 09:32:21,315 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I need to book a flight for my vacation.', 'action': 'book', 'subject': 'flight', 'object': 'vacation', 'entities': ['destination', 'departure_date'], 'sentiment': 'positive'}
+2024-09-04 09:32:21,315 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:21,315 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:21.315515'}
+2024-09-04 09:32:24,314 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'travel plans', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:32:21'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:24,314 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:24,314 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:24.314902'}
+2024-09-04 09:32:27,341 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:32:24.314902'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:27,341 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:27,342 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:27.342407'}
+2024-09-04 09:32:30,345 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'weather', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:32:27.342407'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:30,345 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:30,345 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:30.345736'}
+2024-09-04 09:32:33,105 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'vacation', 'object': None, 'entities': [{'name': 'location', 'value': 'Spain'}], 'sentiment': 'positive'}
+2024-09-04 09:32:33,106 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:33,106 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:33.106280'}
+2024-09-04 09:32:35,841 - IntentInterpreter - INFO - Interpreted intent: {'action': 'booking', 'subject': 'flight', 'object': 'to New York', 'entities': {'date': '2024-09-04', 'time': '09:32:33'}, 'sentiment': 'neutral'}
+2024-09-04 09:32:35,841 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:35,841 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:35.841989'}
+2024-09-04 09:32:38,637 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a table', 'subject': 'user', 'object': 'table', 'entities': {'date': '2024-09-04T09:32:35.841989'}, 'sentiment': 'neutral'}
+2024-09-04 09:32:38,637 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:38,638 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:38.638390'}
+2024-09-04 09:32:41,637 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking a question', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:32:38.638390'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:41,637 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:41,637 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:41.637899'}
+2024-09-04 09:32:44,596 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask_question', 'subject': 'meeting', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:32:41.637899'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:44,597 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:44,597 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:44.597066'}
+2024-09-04 09:32:47,543 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:32:44'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:47,543 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:47,543 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:47.543506'}
+2024-09-04 09:32:50,511 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:32:47'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:50,511 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:50,511 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:50.511880'}
+2024-09-04 09:32:53,188 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'movie', 'object': 'recommendation', 'entities': [{'entity': 'genre', 'value': 'sci-fi'}], 'sentiment': 'neutral'}
+2024-09-04 09:32:53,188 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:53,188 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:53.188833'}
+2024-09-04 09:32:56,015 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'event planning', 'object': 'details about a conference', 'entities': {'date': '2024-09-04', 'time': '09:32:53'}, 'sentiment': 'neutral'}
+2024-09-04 09:32:56,015 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:56,016 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:56.016067'}
+2024-09-04 09:32:58,658 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurant', 'object': None, 'entities': {'date': '2024-09-04'}, 'sentiment': 'neutral'}
+2024-09-04 09:32:58,658 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:32:58,659 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:32:58.659476'}
+2024-09-04 09:33:01,355 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'vacation', 'object': None, 'entities': [{'name': 'location', 'value': 'Maldives'}], 'sentiment': 'positive'}
+2024-09-04 09:33:01,355 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:01,355 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:01.355732'}
+2024-09-04 09:33:04,316 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book flight', 'subject': 'user', 'object': 'flight', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:33:01'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:04,317 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:04,317 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:04.317464'}
+2024-09-04 09:33:07,206 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:33:04.317464'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:07,206 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:07,206 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:07.206981'}
+2024-09-04 09:33:09,893 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'the user', 'object': 'a car', 'entities': {'date': '2024-09-04'}, 'sentiment': 'positive'}
+2024-09-04 09:33:09,893 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:09,893 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:09.893898'}
+2024-09-04 09:33:12,614 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'schedule appointment', 'object': "doctor's visit", 'entities': {'date': '2024-09-04', 'time': '09:33'}, 'sentiment': 'neutral'}
+2024-09-04 09:33:12,614 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:12,615 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:12.615484'}
+2024-09-04 09:33:15,462 - IntentInterpreter - INFO - Interpreted intent: {'input': 'Hey! I want to book a flight to London for two people on September 1st.', 'action': 'book', 'subject': 'flight', 'object': 'London', 'entities': {'date': 'September 1st', 'num_passengers': 2}, 'sentiment': 'neutral'}
+2024-09-04 09:33:15,462 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:15,462 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:15.462536'}
+2024-09-04 09:33:18,041 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'user', 'object': 'phone', 'entities': ['Apple', 'iPhone'], 'sentiment': 'positive'}
+2024-09-04 09:33:18,041 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:18,042 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:18.042212'}
+2024-09-04 09:33:20,797 - IntentInterpreter - INFO - Interpreted intent: {'input': 'Hey AI, can you help me understand why people are so obsessed with superheroes?', 'action': 'understanding', 'subject': "people's obsession with superheroes", 'object': None, 'entities': ['superheroes'], 'sentiment': 'curiosity'}
+2024-09-04 09:33:20,797 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:20,798 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:20.798180'}
+2024-09-04 09:33:23,731 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie tickets', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:33:20'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:23,731 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:23,732 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:23.732329'}
+2024-09-04 09:33:26,755 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask_question', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:33:23.732329'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:26,755 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:26,755 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:26.755563'}
+2024-09-04 09:33:29,503 - IntentInterpreter - INFO - Interpreted intent: {'action': 'express concern', 'subject': 'climate change', 'object': None, 'entities': [{'name': 'climate change', 'type': 'environment'}], 'sentiment': 'negative'}
+2024-09-04 09:33:29,504 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:29,504 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:29.504590'}
+2024-09-04 09:33:32,263 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'road trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'national park'}], 'sentiment': 'positive'}
+2024-09-04 09:33:32,263 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:32,264 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:32.264173'}
+2024-09-04 09:33:35,000 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'travel destinations', 'object': None, 'entities': [{'name': 'travel destinations', 'value': 'amazing places to visit'}], 'sentiment': 'positive'}
+2024-09-04 09:33:35,000 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:35,000 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:35.000532'}
+2024-09-04 09:33:37,618 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest a movie', 'subject': 'user', 'object': 'movie', 'entities': ['genre', 'popularity'], 'sentiment': 'neutral'}
+2024-09-04 09:33:37,618 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:37,618 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:37.618907'}
+2024-09-04 09:33:40,643 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'uncomfortable hotel room', 'object': None, 'entities': [{'type': 'Location', 'value': 'hotel'}, {'type': 'Time', 'value': '2024-09-04T09:33:37.618907'}], 'sentiment': 'negative'}
+2024-09-04 09:33:40,643 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:40,644 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:40.644363'}
+2024-09-04 09:33:43,614 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a car', 'subject': 'user', 'object': 'car', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:33:40.644363'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:43,614 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:43,614 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:43.614573'}
+2024-09-04 09:33:46,580 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'events', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:33:43.614573'}], 'sentiment': None}
+2024-09-04 09:33:46,580 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:46,580 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:46.580612'}
+2024-09-04 09:33:49,490 - IntentInterpreter - INFO - Interpreted intent: {'input': "The new restaurant opened last week and it's really popular among locals.", 'action': 'state', 'subject': 'new restaurant', 'object': 'popular among locals', 'entities': [{'type': 'restaurant', 'value': 'new restaurant'}, {'type': 'timeframe', 'value': 'last week'}], 'sentiment': 'positive'}
+2024-09-04 09:33:49,490 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:49,490 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:49.490856'}
+2024-09-04 09:33:52,209 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': 'store manager', 'entities': [{'name': 'store_manager', 'value': 'manager'}], 'sentiment': 'negative'}
+2024-09-04 09:33:52,209 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:52,209 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:52.209765'}
+2024-09-04 09:33:55,174 - IntentInterpreter - INFO - Interpreted intent: {'action': 'make a reservation', 'subject': 'user', 'object': 'restaurant', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:33:52.209765'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:55,175 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:55,175 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:55.175414'}
+2024-09-04 09:33:58,139 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'upcoming event', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:33:55'}], 'sentiment': 'neutral'}
+2024-09-04 09:33:58,139 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:33:58,139 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:33:58.139866'}
+2024-09-04 09:34:01,148 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'schedule', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:33:58.139866'}], 'sentiment': None}
+2024-09-04 09:34:01,148 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:01,148 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:01.148528'}
+2024-09-04 09:34:04,189 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'train schedule', 'object': 'requesting information about trains', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:34:01.148528'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:04,189 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:04,190 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:04.190079'}
+2024-09-04 09:34:06,965 - IntentInterpreter - INFO - Interpreted intent: {'action': 'make a reservation', 'subject': 'restaurant', 'object': 'table for two', 'entities': {'date': '2024-09-04', 'time': '18:00'}, 'sentiment': 'positive'}
+2024-09-04 09:34:06,965 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:06,965 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:06.965823'}
+2024-09-04 09:34:09,763 - IntentInterpreter - INFO - Interpreted intent: {'action': 'Book a flight', 'subject': 'The user', 'object': 'A flight ticket', 'entities': {'date': '2024-09-04', 'time': '09:34'}, 'sentiment': 'neutral'}
+2024-09-04 09:34:09,764 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:09,764 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:09.764420'}
+2024-09-04 09:34:12,465 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to buy a new smartphone from Samsung.', 'action': 'buy', 'subject': 'smartphone', 'object': 'Samsung', 'entities': ['smartphone', 'Samsung'], 'sentiment': 'positive'}
+2024-09-04 09:34:12,465 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:12,466 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:12.466059'}
+2024-09-04 09:34:15,041 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service experience', 'object': None, 'entities': ['customer service'], 'sentiment': 'negative'}
+2024-09-04 09:34:15,041 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:15,042 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:15.042470'}
+2024-09-04 09:34:17,751 - IntentInterpreter - INFO - Interpreted intent: {'action': 'schedule', 'subject': 'meeting', 'object': 'with John', 'entities': [{'name': 'John', 'type': 'person'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:17,751 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:17,751 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:17.751846'}
+2024-09-04 09:34:20,669 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I need to book a flight from New York City to Los Angeles for September 15th.', 'action': 'book', 'subject': 'flight', 'object': 'New York City, Los Angeles, September 15th', 'entities': ['New York City', 'Los Angeles', 'September 15th'], 'sentiment': 'neutral'}
+2024-09-04 09:34:20,670 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:20,670 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:20.670376'}
+2024-09-04 09:34:23,347 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'food', 'value': 'Italian'}, {'name': 'location', 'value': 'city center'}], 'sentiment': 'positive'}
+2024-09-04 09:34:23,347 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:23,348 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:23.348429'}
+2024-09-04 09:34:26,344 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'hotel booking', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:34:23.348429'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:26,344 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:26,345 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:26.345450'}
+2024-09-04 09:34:29,096 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'restaurant', 'type': 'place'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:29,096 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:29,096 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:29.096815'}
+2024-09-04 09:34:31,866 - IntentInterpreter - INFO - Interpreted intent: {'action': 'express_opinion', 'subject': 'movie', 'object': None, 'entities': [{'name': 'movie', 'type': 'entertainment'}], 'sentiment': 'positive'}
+2024-09-04 09:34:31,866 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:31,867 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:31.867491'}
+2024-09-04 09:34:34,812 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a table', 'subject': 'user', 'object': 'table', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:34:31.867491'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:34,812 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:34,813 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:34.813163'}
+2024-09-04 09:34:37,506 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'type', 'value': 'Italian'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:37,506 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:37,506 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:37.506548'}
+2024-09-04 09:34:40,395 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I need to buy a new car. I want something efficient with good fuel economy.', 'action': 'buy', 'subject': 'car', 'object': 'efficient, good fuel economy', 'entities': ['new car', 'fuel efficiency'], 'sentiment': 'positive'}
+2024-09-04 09:34:40,395 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:40,395 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:40.395689'}
+2024-09-04 09:34:43,265 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to buy a new smartphone. Can you recommend some good models?', 'action': 'recommend', 'subject': 'smartphone models', 'object': None, 'entities': [{'name': 'product', 'value': 'smartphone'}], 'sentiment': 'positive'}
+2024-09-04 09:34:43,266 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:43,266 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:43.266492'}
+2024-09-04 09:34:46,055 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': 'to London', 'entities': [{'name': 'London', 'type': 'destination'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:46,055 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:46,055 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:46.055779'}
+2024-09-04 09:34:48,964 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'restaurant reservation', 'object': 'table for two', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '18:00'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:48,964 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:48,964 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:48.964080'}
+2024-09-04 09:34:51,980 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a ticket', 'subject': 'user', 'object': 'ticket', 'entities': [{'name': 'event', 'value': 'concert'}, {'name': 'date', 'value': '2024-09-04T19:00:00.000000Z'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:51,981 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:51,981 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:51.981102'}
+2024-09-04 09:34:54,903 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:34:51'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:54,903 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:54,903 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:54.903797'}
+2024-09-04 09:34:57,659 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie information', 'object': None, 'entities': [{'name': 'movie', 'value': 'The Avengers'}], 'sentiment': 'neutral'}
+2024-09-04 09:34:57,659 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:34:57,660 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:34:57.660040'}
+2024-09-04 09:35:00,580 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurant', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:34:57.660040'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:00,580 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:00,581 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:00.581107'}
+2024-09-04 09:35:03,305 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'appointment scheduling', 'object': None, 'entities': {'date': '2024-09-04', 'time': '09:35'}, 'sentiment': 'neutral'}
+2024-09-04 09:35:03,305 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:03,305 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:03.305576'}
+2024-09-04 09:35:06,028 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'weather', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:06,028 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:06,028 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:06.028866'}
+2024-09-04 09:35:09,170 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The restaurant had a beautiful view of the city skyline. It was very expensive.', 'action': 'review', 'subject': 'restaurant', 'object': 'city skyline', 'entities': [{'name': 'restaurant', 'type': 'location'}, {'name': 'city skyline', 'type': 'location'}], 'sentiment': 'negative'}
+2024-09-04 09:35:09,170 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:09,170 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:09.170437'}
+2024-09-04 09:35:11,935 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book store appointment', 'object': 'at a book store', 'entities': [{'name': 'book store', 'type': 'place'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:11,935 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:11,935 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:11.935954'}
+2024-09-04 09:35:14,920 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:11.935954'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:14,920 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:14,920 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:14.920963'}
+2024-09-04 09:35:17,543 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment scheduling', 'object': 'dentist', 'entities': ['date', 'time'], 'sentiment': 'neutral'}
+2024-09-04 09:35:17,543 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:17,543 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:17.543828'}
+2024-09-04 09:35:20,557 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:17.543828'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:20,557 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:20,558 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:20.558292'}
+2024-09-04 09:35:23,325 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'bad customer service experience', 'object': 'the store', 'entities': [{'type': 'location', 'name': 'the store'}], 'sentiment': 'negative'}
+2024-09-04 09:35:23,325 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:23,326 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:23.326185'}
+2024-09-04 09:35:26,187 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04T09:35:23.326185'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:26,187 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:26,187 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:26.187737'}
+2024-09-04 09:35:29,166 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a hotel', 'subject': 'user', 'object': 'hotel', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:26.187737'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:29,167 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:29,167 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:29.167917'}
+2024-09-04 09:35:31,909 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'book', 'object': 'hotel', 'entities': {'date': '2024-09-04', 'time': '09:35:29'}, 'sentiment': 'neutral'}
+2024-09-04 09:35:31,910 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:31,910 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:31.910276'}
+2024-09-04 09:35:34,933 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book', 'subject': 'a hotel', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:31.910276'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:34,933 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:34,933 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:34.933825'}
+2024-09-04 09:35:37,768 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask_question', 'subject': 'date', 'object': None, 'entities': [{'name': '2024-09-04T09:35:34.933825', 'type': 'datetime'}], 'sentiment': None}
+2024-09-04 09:35:37,769 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:37,769 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:37.769448'}
+2024-09-04 09:35:40,777 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'bus schedule', 'object': 'information about bus routes', 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:35:37.769448'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:40,777 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:40,778 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:40.778298'}
+2024-09-04 09:35:43,878 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a reservation', 'subject': 'user', 'object': 'restaurant reservation', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '17:00'}, {'name': 'party size', 'value': '3 people'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:43,879 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:43,879 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:43.879257'}
+2024-09-04 09:35:46,659 - IntentInterpreter - INFO - Interpreted intent: {'action': 'purchase', 'subject': 'user', 'object': 'ticket', 'entities': {'event': 'concert', 'date': '2024-09-30'}, 'sentiment': 'positive'}
+2024-09-04 09:35:46,659 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:46,659 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:46.659793'}
+2024-09-04 09:35:49,381 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'appointment', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:46'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:49,381 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:49,382 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:49.382224'}
+2024-09-04 09:35:52,328 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book hotel', 'subject': 'user', 'object': 'hotel', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:35:49'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:52,329 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:52,329 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:52.329117'}
+2024-09-04 09:35:55,077 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': None, 'object': None, 'entities': [{'name': 'vacation destination', 'value': 'Maldives'}], 'sentiment': 'positive'}
+2024-09-04 09:35:55,077 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:55,077 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:55.077807'}
+2024-09-04 09:35:57,895 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The students had to present their projects in front of the class.', 'action': 'present', 'subject': 'students', 'object': 'projects', 'entities': [{'name': 'class', 'type': 'audience'}], 'sentiment': 'neutral'}
+2024-09-04 09:35:57,895 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:35:57,896 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:35:57.896257'}
+2024-09-04 09:36:00,692 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'name': 'customer service', 'type': 'service'}], 'sentiment': 'negative'}
+2024-09-04 09:36:00,693 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:00,693 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:00.693863'}
+2024-09-04 09:36:03,478 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The user wants to book a flight from London to New York for tomorrow.', 'action': 'book', 'subject': 'flight', 'object': 'tomorrow', 'entities': ['London', 'New York'], 'sentiment': 'neutral'}
+2024-09-04 09:36:03,478 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:03,479 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:03.479088'}
+2024-09-04 09:36:06,528 - IntentInterpreter - INFO - Interpreted intent: {'action': 'requesting information', 'subject': 'upcoming event', 'object': 'details', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:36:03.479088'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:06,528 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:06,529 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:06.529409'}
+2024-09-04 09:36:09,440 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'vacation', 'object': None, 'entities': [{'name': 'destination', 'value': 'Mallorca'}, {'name': 'time', 'value': 'next summer'}], 'sentiment': 'positive'}
+2024-09-04 09:36:09,440 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:09,440 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:09.440729'}
+2024-09-04 09:36:12,242 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book', 'subject': 'user', 'object': 'flight', 'entities': {'destination': 'New York', 'date': 'September 10th, 2024'}, 'sentiment': 'positive'}
+2024-09-04 09:36:12,242 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:12,242 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:12.242798'}
+2024-09-04 09:36:15,028 - IntentInterpreter - INFO - Interpreted intent: {'action': 'expressing_opinion', 'subject': 'weather', 'object': None, 'entities': [{'name': 'weather', 'type': 'topic'}], 'sentiment': 'positive'}
+2024-09-04 09:36:15,028 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:15,028 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:15.028593'}
+2024-09-04 09:36:17,700 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The restaurant has a great view of the lake.', 'action': 'describe', 'subject': 'restaurant', 'object': 'view', 'entities': ['restaurant', 'lake'], 'sentiment': 'positive'}
+2024-09-04 09:36:17,700 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:17,701 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:17.701146'}
+2024-09-04 09:36:20,875 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The government should not invest in new technology unless it has been proven to be effective and sustainable.', 'action': 'regulate investment in new technology', 'subject': 'government', 'object': 'investment in new technology', 'entities': [{'name': 'effective', 'type': 'quality'}, {'name': 'sustainable', 'type': 'quality'}], 'sentiment': 'negative'}
+2024-09-04 09:36:20,876 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:20,876 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:20.876473'}
+2024-09-04 09:36:23,899 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asked', 'subject': 'user', 'object': 'AI assistant', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:36:20.876473'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:23,899 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:23,900 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:23.900468'}
+2024-09-04 09:36:26,774 - IntentInterpreter - INFO - Interpreted intent: {'action': 'query', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04T09:36:23.900468'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:26,774 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:26,775 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:26.775347'}
+2024-09-04 09:36:29,415 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'vacation', 'object': 'to Italy', 'entities': {'destination': 'Italy'}, 'sentiment': 'positive'}
+2024-09-04 09:36:29,415 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:29,416 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:29.416316'}
+2024-09-04 09:36:32,338 - IntentInterpreter - INFO - Interpreted intent: {'input': "I'm looking for a restaurant near my office where I can have a romantic dinner with my girlfriend this Friday.", 'action': 'looking_for', 'subject': 'restaurant', 'object': 'romantic dinner', 'entities': {'office_location': 'my office', 'date': 'Friday'}, 'sentiment': 'positive'}
+2024-09-04 09:36:32,338 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:32,338 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:32.338660'}
+2024-09-04 09:36:34,932 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan travel', 'subject': 'user', 'object': 'travel plans', 'entities': ['destination', 'date'], 'sentiment': 'neutral'}
+2024-09-04 09:36:34,932 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:34,932 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:34.932415'}
+2024-09-04 09:36:37,781 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan event', 'subject': 'user', 'object': 'event', 'entities': [{'type': 'date', 'value': '2024-09-04T09:36:34.932415'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:37,781 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:37,782 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:37.782037'}
+2024-09-04 09:36:40,658 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'restaurant', 'object': 'meal', 'entities': [{'name': 'cuisine type', 'value': 'Italian'}, {'name': 'price range', 'value': '$$'}], 'sentiment': 'positive'}
+2024-09-04 09:36:40,658 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:40,659 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:40.659064'}
+2024-09-04 09:36:43,455 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The government decided to allocate more funds for education.', 'action': 'decided', 'subject': 'government', 'object': 'more funds', 'entities': {'purpose': 'education'}, 'sentiment': 'positive'}
+2024-09-04 09:36:43,455 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:43,455 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:43.455951'}
+2024-09-04 09:36:46,247 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to book a room with a view of the lake for my honeymoon.', 'action': 'book', 'subject': 'room', 'object': 'view of the lake', 'entities': ['honeymoon'], 'sentiment': 'positive'}
+2024-09-04 09:36:46,247 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:46,248 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:46.248089'}
+2024-09-04 09:36:48,999 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggestion', 'subject': 'diet', 'object': None, 'entities': [{'name': 'healthy food choices', 'type': 'food'}], 'sentiment': 'positive'}
+2024-09-04 09:36:48,999 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:49,000 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:49.000412'}
+2024-09-04 09:36:51,904 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'appointment scheduling', 'object': None, 'entities': [{'entity': 'date', 'value': '2024-09-04'}, {'entity': 'time', 'value': '09:36:49'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:51,904 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:51,905 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:51.905151'}
+2024-09-04 09:36:54,578 - IntentInterpreter - INFO - Interpreted intent: {'action': 'make a recommendation', 'subject': 'restaurant', 'object': None, 'entities': {'cuisine': 'Italian'}, 'sentiment': 'neutral'}
+2024-09-04 09:36:54,578 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:54,579 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:54.579299'}
+2024-09-04 09:36:57,519 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking', 'subject': 'appointment scheduling', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:36:54.579299'}], 'sentiment': 'neutral'}
+2024-09-04 09:36:57,519 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:36:57,519 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:36:57.519987'}
+2024-09-04 09:37:00,142 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book_flight', 'subject': 'user', 'object': 'flight', 'entities': ['departure_date', 'destination'], 'sentiment': 'neutral'}
+2024-09-04 09:37:00,142 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:00,142 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:00.142780'}
+2024-09-04 09:37:03,024 - IntentInterpreter - INFO - Interpreted intent: {'action': 'buy', 'subject': 'user', 'object': 'product', 'entities': [{'name': 'product', 'value': 'wireless headphones'}, {'name': 'price', 'value': '300 dollars'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:03,024 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:03,025 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:03.025022'}
+2024-09-04 09:37:06,052 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'vacation', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:37:03.025022'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:06,053 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:06,053 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:06.053494'}
+2024-09-04 09:37:08,807 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'movie recommendations', 'object': None, 'entities': [{'name': 'genre', 'value': 'comedy'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:08,807 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:08,807 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:08.807672'}
+2024-09-04 09:37:11,528 - IntentInterpreter - INFO - Interpreted intent: {'input': "I'm looking for a restaurant with great ambiance and outdoor seating.", 'action': 'search', 'subject': 'restaurant', 'object': 'great ambiance, outdoor seating', 'entities': ['ambiance', 'outdoor seating'], 'sentiment': 'positive'}
+2024-09-04 09:37:11,528 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:11,528 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:11.528723'}
+2024-09-04 09:37:14,451 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inquire', 'subject': 'appointment scheduling', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:37'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:14,451 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:14,451 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:14.451624'}
+2024-09-04 09:37:17,156 - IntentInterpreter - INFO - Interpreted intent: {'action': 'book a hotel', 'subject': 'user', 'object': 'hotel', 'entities': {'date': '2024-09-04'}, 'sentiment': 'neutral'}
+2024-09-04 09:37:17,156 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:17,157 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:17.157073'}
+2024-09-04 09:37:20,028 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I am looking for a pizza place near me.', 'action': 'search', 'subject': 'pizza place', 'object': 'near me', 'entities': [{'name': 'pizza place', 'type': 'business'}, {'name': 'near me', 'type': 'location'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:20,028 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:20,028 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:20.028759'}
+2024-09-04 09:37:23,039 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'weather forecast', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:37:20.028759'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:23,039 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:23,040 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:23.040320'}
+2024-09-04 09:37:26,080 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I need a professional to repair my broken smartphone.', 'action': 'repair', 'subject': 'smartphone', 'object': None, 'entities': [{'type': 'device', 'name': 'smartphone'}, {'type': 'status', 'name': 'broken'}], 'sentiment': 'negative'}
+2024-09-04 09:37:26,080 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:26,081 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:26.081037'}
+2024-09-04 09:37:28,865 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommend', 'subject': 'movie', 'object': None, 'entities': [{'name': 'genre', 'value': 'horror'}, {'name': 'release year', 'value': '2023'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:28,866 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:28,866 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:28.866374'}
+2024-09-04 09:37:31,635 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest a plan for', 'subject': 'a trip to Paris', 'object': None, 'entities': [{'name': 'Paris', 'type': 'location'}], 'sentiment': 'positive'}
+2024-09-04 09:37:31,635 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:31,635 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:31.635955'}
+2024-09-04 09:37:34,452 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a road trip', 'subject': 'the user', 'object': 'a road trip', 'entities': [{'name': 'destination', 'value': 'national parks'}], 'sentiment': 'positive'}
+2024-09-04 09:37:34,452 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:34,452 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:34.452963'}
+2024-09-04 09:37:37,438 - IntentInterpreter - INFO - Interpreted intent: {'action': 'ask', 'subject': 'movie tickets', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:37:34.452963'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:37,438 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:37,439 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:37.439225'}
+2024-09-04 09:37:40,456 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'date', 'object': '2024-09-04T09:37:37.439225', 'entities': [{'name': 'date', 'value': '2024-09-04T09:37:37.439225'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:40,456 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:40,457 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:40.457446'}
+2024-09-04 09:37:43,471 - IntentInterpreter - INFO - Interpreted intent: {'action': 'inform', 'subject': 'appointment', 'object': None, 'entities': [{'entity': 'date', 'value': '2024-09-04'}, {'entity': 'time', 'value': '09:37:40.457446'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:43,471 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:43,472 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:43.472029'}
+2024-09-04 09:37:46,536 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'upcoming event or occasion', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:37:43.472029'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:46,536 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:46,537 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:46.537013'}
+2024-09-04 09:37:49,474 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'movie information', 'object': None, 'entities': [{'entity': 'date', 'value': '2024-09-04'}, {'entity': 'time', 'value': '09:37:46.537013'}], 'sentiment': None}
+2024-09-04 09:37:49,474 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:49,474 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:49.474786'}
+2024-09-04 09:37:52,460 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan_a_getaway', 'subject': 'user', 'object': 'getaway', 'entities': [{'name': 'destination', 'value': 'Maldives'}, {'name': 'date', 'value': '2024-09-04'}], 'sentiment': 'positive'}
+2024-09-04 09:37:52,460 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:52,460 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:52.460684'}
+2024-09-04 09:37:55,496 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for clarification', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:37:52.460684'}], 'sentiment': 'neutral'}
+2024-09-04 09:37:55,496 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:55,497 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:55.497211'}
+2024-09-04 09:37:58,462 - IntentInterpreter - INFO - Interpreted intent: {'action': 'recommendation', 'subject': None, 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:37:55.497211'}], 'sentiment': None}
+2024-09-04 09:37:58,462 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:37:58,462 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:37:58.462535'}
+2024-09-04 09:38:01,243 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan', 'subject': 'trip', 'object': None, 'entities': [{'name': 'destination', 'value': 'Italy'}, {'name': 'date', 'value': '2024-09-04'}], 'sentiment': 'positive'}
+2024-09-04 09:38:01,243 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:01,243 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:01.243587'}
+2024-09-04 09:38:04,148 - IntentInterpreter - INFO - Interpreted intent: {'input': 'The restaurant had a beautiful view of the ocean, but the food was not great.', 'action': 'review', 'subject': 'restaurant', 'object': 'food quality', 'entities': {'view_type': 'ocean view', 'sentiment_towards_view': 'positive'}, 'sentiment': 'negative'}
+2024-09-04 09:38:04,148 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:04,148 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:04.148903'}
+2024-09-04 09:38:07,052 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I would like to buy a new smartphone with a great camera and long battery life.', 'action': 'buy', 'subject': 'smartphone', 'object': 'new', 'entities': [{'name': 'camera', 'value': 'great'}, {'name': 'battery life', 'value': 'long'}], 'sentiment': 'positive'}
+2024-09-04 09:38:07,052 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:07,052 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:07.052948'}
+2024-09-04 09:38:09,862 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to buy a new smartphone this month.', 'action': 'buy', 'subject': 'smartphone', 'object': None, 'entities': {'priceRange': 'this month'}, 'sentiment': 'positive'}
+2024-09-04 09:38:09,862 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:09,862 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:09.862541'}
+2024-09-04 09:38:12,884 - IntentInterpreter - INFO - Interpreted intent: {'action': 'request', 'subject': 'flight booking', 'object': 'flight information', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:38:09.862541'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:12,884 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:12,884 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:12.884697'}
+2024-09-04 09:38:16,116 - IntentInterpreter - INFO - Interpreted intent: {'action': 'provide information', 'subject': 'date', 'object': None, 'entities': [{'name': 'year', 'value': '2024'}, {'name': 'month', 'value': 'September'}, {'name': 'day', 'value': '04'}, {'name': 'time', 'value': '09:38:12.884697'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:16,116 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:16,117 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:16.117461'}
+2024-09-04 09:38:19,068 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan_event', 'subject': None, 'object': 'event', 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:38:16.117461'}], 'sentiment': None}
+2024-09-04 09:38:19,069 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:19,069 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:19.069002'}
+2024-09-04 09:38:21,955 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'restaurant', 'type': 'business'}, {'name': 'date', 'type': 'datetime'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:21,955 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:21,956 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:21.956141'}
+2024-09-04 09:38:24,947 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'type': 'date', 'value': '2024-09-04'}, {'type': 'time', 'value': '09:38:21.956141'}], 'sentiment': 'negative'}
+2024-09-04 09:38:24,947 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:24,948 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:24.948161'}
+2024-09-04 09:38:27,748 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to buy a new phone with a great camera for my birthday', 'action': 'buy', 'subject': 'phone', 'object': 'camera', 'entities': {'occasion': 'birthday'}, 'sentiment': 'positive'}
+2024-09-04 09:38:27,748 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:27,748 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:27.748947'}
+2024-09-04 09:38:30,727 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'the user', 'object': None, 'entities': [{'name': 'destination', 'value': 'Japan'}, {'name': 'date', 'value': '2024-09-04T09:38:27.748947'}], 'sentiment': 'positive'}
+2024-09-04 09:38:30,727 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:30,727 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:30.727557'}
+2024-09-04 09:38:33,470 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for a recommendation', 'subject': 'movie', 'object': None, 'entities': [{'name': 'genre', 'value': 'romantic comedy'}, {'name': 'release year', 'value': '2024'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:33,471 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:33,471 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:33.471268'}
+2024-09-04 09:38:36,338 - IntentInterpreter - INFO - Interpreted intent: {'action': 'Book a hotel', 'subject': 'The user', 'object': 'a hotel room', 'entities': {'checkin_date': '2024-09-04', 'checkout_date': '2024-09-07'}, 'sentiment': 'Neutral'}
+2024-09-04 09:38:36,338 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:36,339 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:36.339070'}
+2024-09-04 09:38:39,227 - IntentInterpreter - INFO - Interpreted intent: {'action': 'suggest', 'subject': 'restaurant', 'object': None, 'entities': [{'name': 'restaurant', 'type': 'establishment'}, {'name': 'date', 'type': 'time'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:39,227 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:39,228 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:39.228482'}
+2024-09-04 09:38:42,266 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan a trip', 'subject': 'user', 'object': 'trip', 'entities': [{'name': 'destination', 'value': 'Paris'}, {'name': 'time', 'value': '2024-09-04T09:38:39.228482'}], 'sentiment': 'positive'}
+2024-09-04 09:38:42,266 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:42,267 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:42.267147'}
+2024-09-04 09:38:45,306 - IntentInterpreter - INFO - Interpreted intent: {'action': 'asking for information', 'subject': 'upcoming event', 'object': None, 'entities': [{'name': 'date', 'value': '2024-09-04'}, {'name': 'time', 'value': '09:38:42.267147'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:45,306 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:45,306 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:45.306590'}
+2024-09-04 09:38:48,678 - IntentInterpreter - INFO - Interpreted intent: {'input': 'I want to book a flight for my sister to travel from New York to London on September 15th.', 'action': 'book_flight', 'subject': 'sister', 'object': 'flight', 'entities': [{'type': 'location', 'value': 'New York'}, {'type': 'location', 'value': 'London'}, {'type': 'date', 'value': 'September 15th'}], 'sentiment': 'neutral'}
+2024-09-04 09:38:48,679 - AutonomousLoop - ERROR - Failed to generate workflow: Can't instantiate abstract class BaseWorkflow with abstract method execute
+2024-09-04 09:38:48,679 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:38:48.679304'}
+2024-09-04 09:39:06,477 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 09:39:06,478 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T09:39:06.478032'}
+2024-09-04 09:39:09,387 - IntentInterpreter - INFO - Interpreted intent: {'action': 'complain', 'subject': 'poor customer service', 'object': None, 'entities': [{'name': 'poor customer service', 'type': 'problem'}], 'sentiment': 'negative'}
+2024-09-04 09:39:09,387 - AutonomousLoop - ERROR - Failed to optimize workflow: 'int' object is not callable
+2024-09-04 09:39:09,387 - AutonomousLoop - INFO - Executing workflow: Workflow for complain
+2024-09-04 09:39:09,387 - AutonomousLoop - INFO - Executing step: <function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000015C7A669510>
+2024-09-04 09:39:09,387 - AutonomousLoop - INFO - Workflow Workflow for complain execution completed with status: completed
+2024-09-04 09:39:09,391 - AutonomousLoop - INFO - Publishing event: {
+  "timestamp": "2024-09-04T09:39:09.391815",
+  "result": {
+    "status": "completed",
+    "output": [
+      {
+        "name": "<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000015C7A669510>",
+        "status": "completed",
+        "output": null,
+        "start_time": "2024-09-04T09:39:09.387810",
+        "end_time": "2024-09-04T09:39:09.387810"
+      }
+    ],
+    "errors": [],
+    "start_time": "2024-09-04T09:39:09.387810",
+    "end_time": "2024-09-04T09:39:09.387810",
+    "estimated_runtime": 0
+  },
+  "explanation": "Action result: status: completed, output: [{'name': '<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000015C7A669510>', 'status': 'completed', 'output': None, 'start_time': '2024-09-04T09:39:09.387810', 'end_time': '2024-09-04T09:39:09.387810'}], errors: [], start_time: 2024-09-04T09:39:09.387810, end_time: 2024-09-04T09:39:09.387810, estimated_runtime: 0\nImpact: {'Environmental': 0.13470578997631752, 'Social': 0.5152222863793008, 'Economic': -0.35580419072483527, 'Technological': 1.6287390308849958}\nAlignment: Not aligned\n"
+}
+2024-09-04 09:39:09,393 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 09:39:14,398 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 10:00:52,836 - ExperienceEngine - INFO - ExperienceEngine initialized
+2024-09-04 10:00:52,837 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T10:00:52.837573'}
+2024-09-04 10:00:57,105 - IntentInterpreter - INFO - Interpreted intent: {'action': 'query', 'subject': 'movie ratings', 'object': 'top rated movies', 'entities': [{'name': 'IMDb', 'type': 'website'}], 'sentiment': 'neutral'}
+2024-09-04 10:00:57,105 - AutonomousLoop - ERROR - Failed to optimize workflow: 'int' object is not callable
+2024-09-04 10:00:57,105 - AutonomousLoop - INFO - Executing workflow: Workflow for query
+2024-09-04 10:00:57,105 - AutonomousLoop - INFO - Executing step: <function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F5083A710>
+2024-09-04 10:00:57,106 - AutonomousLoop - INFO - Workflow Workflow for query execution completed with status: completed
+2024-09-04 10:00:57,109 - AutonomousLoop - INFO - Publishing event: {
+  "timestamp": "2024-09-04T10:00:57.109887",
+  "result": {
+    "status": "completed",
+    "output": [
+      {
+        "name": "<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F5083A710>",
+        "status": "completed",
+        "output": null,
+        "start_time": "2024-09-04T10:00:57.106252",
+        "end_time": "2024-09-04T10:00:57.106252"
+      }
+    ],
+    "errors": [],
+    "start_time": "2024-09-04T10:00:57.105725",
+    "end_time": "2024-09-04T10:00:57.106252",
+    "estimated_runtime": 0
+  },
+  "explanation": "{\n  \"action_result\": {\n    \"status\": \"completed\",\n    \"output\": [\n      {\n        \"name\": \"<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F5083A710>\",\n        \"status\": \"completed\",\n        \"output\": null,\n        \"start_time\": \"2024-09-04T10:00:57.106252\",\n        \"end_time\": \"2024-09-04T10:00:57.106252\"\n      }\n    ],\n    \"errors\": [],\n    \"start_time\": \"2024-09-04T10:00:57.105725\",\n    \"end_time\": \"2024-09-04T10:00:57.106252\",\n    \"estimated_runtime\": 0\n  },\n  \"impact\": {\n    \"Environmental\": -2.4294197210142148,\n    \"Social\": 1.9496126189843348,\n    \"Economic\": 1.1622978081021456,\n    \"Technological\": -0.8125288907132803\n  },\n  \"alignment\": \"Not aligned\"\n}"
+}
+2024-09-04 10:00:57,111 - AutonomousLoop - ERROR - VirtualEnvironment does not have publish_event method. Skipping event publication.
+2024-09-04 10:00:57,113 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 10:01:02,139 - AutonomousLoop - INFO - Error recovery attempt completed.
+2024-09-04 10:02:02,140 - AutonomousLoop - INFO - Gathered input: {'source': 'user_input', 'data': 'Sample input at 2024-09-04T10:02:02.140810'}
+2024-09-04 10:02:04,804 - IntentInterpreter - INFO - Interpreted intent: {'action': 'plan trip', 'subject': 'user', 'object': 'trip', 'entities': ['destination', 'date'], 'sentiment': 'excitement'}
+2024-09-04 10:02:04,804 - AutonomousLoop - ERROR - Failed to optimize workflow: 'int' object is not callable
+2024-09-04 10:02:04,804 - AutonomousLoop - INFO - Executing workflow: Workflow for plan trip
+2024-09-04 10:02:04,804 - AutonomousLoop - INFO - Executing step: <function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F50847370>
+2024-09-04 10:02:04,805 - AutonomousLoop - INFO - Workflow Workflow for plan trip execution completed with status: completed
+2024-09-04 10:02:04,808 - AutonomousLoop - INFO - Publishing event: {
+  "timestamp": "2024-09-04T10:02:04.808839",
+  "result": {
+    "status": "completed",
+    "output": [
+      {
+        "name": "<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F50847370>",
+        "status": "completed",
+        "output": null,
+        "start_time": "2024-09-04T10:02:04.805209",
+        "end_time": "2024-09-04T10:02:04.805209"
+      }
+    ],
+    "errors": [],
+    "start_time": "2024-09-04T10:02:04.804685",
+    "end_time": "2024-09-04T10:02:04.805209",
+    "estimated_runtime": 0
+  },
+  "explanation": "{\n  \"action_result\": {\n    \"status\": \"completed\",\n    \"output\": [\n      {\n        \"name\": \"<function WorkflowEngine._handle_default.<locals>.<lambda> at 0x0000018F50847370>\",\n        \"status\": \"completed\",\n        \"output\": null,\n        \"start_time\": \"2024-09-04T10:02:04.805209\",\n        \"end_time\": \"2024-09-04T10:02:04.805209\"\n      }\n    ],\n    \"errors\": [],\n    \"start_time\": \"2024-09-04T10:02:04.804685\",\n    \"end_time\": \"2024-09-04T10:02:04.805209\",\n    \"estimated_runtime\": 0\n  },\n  \"impact\": {\n    \"Environmental\": 2.99922255035175,\n    \"Social\": -0.7371284534894963,\n    \"Economic\": -1.784577543245602,\n    \"Technological\": -0.19517665047125343\n  },\n  \"alignment\": \"Not aligned\"\n}"
+}
+2024-09-04 10:02:04,810 - AutonomousLoop - ERROR - VirtualEnvironment does not have publish_event method. Skipping event publication.
+2024-09-04 10:02:04,811 - AutonomousLoop - INFO - Attempting error recovery...
+2024-09-04 10:02:09,809 - AutonomousLoop - INFO - Error recovery attempt completed.

@@ -1,10 +1,14 @@
 from typing import Dict, Any, List
 import numpy as np
+import random
+from collections import defaultdict
 
 class FeedbackIntegrator:
-    def __init__(self):
+    def __init__(self, state_size=10, action_size=5):  # Add default values
         self.feedback_history = []
         self.learning_rate = 0.1
+        self.reinforcement_learning_module = ReinforcementLearningModule(state_size, action_size)
+        self.active_learning_engine = ActiveLearningEngine(self)  # Assuming ActiveLearningEngine needs the FeedbackIntegrator instance
 
     def integrate(self, result: Dict[str, Any], impact: Dict[str, float], is_aligned: bool):
         feedback = self._process_feedback(result, impact, is_aligned)
@@ -53,6 +57,57 @@ class FeedbackIntegrator:
 
     def get_recent_feedback(self, n: int = 5) -> List[Dict[str, Any]]:
         return self.feedback_history[-n:]
+
+# Add new classes for advanced feedback integration
+class ReinforcementLearningModule:
+    def __init__(self, state_size=10, action_size=5, learning_rate=0.1, discount_factor=0.9, epsilon=0.1):
+        self.q_table = defaultdict(lambda: np.zeros(action_size))
+        self.learning_rate = learning_rate
+        self.discount_factor = discount_factor
+        self.epsilon = epsilon
+        self.action_size = action_size
+
+    def update(self, state, action, reward, next_state):
+        current_q = self.q_table[state][action]
+        next_max_q = np.max(self.q_table[next_state])
+        new_q = current_q + self.learning_rate * (reward + self.discount_factor * next_max_q - current_q)
+        self.q_table[state][action] = new_q
+
+    def get_action(self, state):
+        if np.random.rand() < self.epsilon:
+            return np.random.randint(self.action_size)
+        return np.argmax(self.q_table[state])
+
+class ActiveLearningEngine:
+    def __init__(self, feedback_integrator, uncertainty_threshold=0.3):
+        self.feedback_integrator = feedback_integrator
+        self.uncertainty_threshold = uncertainty_threshold
+        self.labeled_data = []
+
+    def learn(self, unlabeled_data):
+        uncertain_samples = []
+        for sample in unlabeled_data:
+            uncertainty = self._calculate_uncertainty(sample)
+            if uncertainty > self.uncertainty_threshold:
+                label = self._query_oracle(sample)
+                self.labeled_data.append((sample, label))
+                uncertain_samples.append(sample)
+        
+        if uncertain_samples:
+            self._update_model(uncertain_samples)
+
+    def _calculate_uncertainty(self, sample):
+        # Placeholder: In a real scenario, this would use the model to predict
+        # and calculate uncertainty based on prediction probabilities
+        return np.random.random()
+
+    def _query_oracle(self, sample):
+        # Placeholder: In a real scenario, this would involve human interaction
+        return np.random.randint(2)
+
+    def _update_model(self, new_samples):
+        # Placeholder: In a real scenario, this would retrain the model
+        print(f"Updating model with {len(new_samples)} new samples")
 
 # Usage example
 if __name__ == "__main__":
